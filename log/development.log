@@ -33,3 +33,31 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 274ms (Views: 9.7ms)
 
 
+Started GET "/welcome/index" for 127.0.0.1 at 2017-09-09 16:36:43 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 416ms (Views: 243.4ms)
+
+
+Started GET "/welcome/about" for 127.0.0.1 at 2017-09-09 16:36:51 -0700
+Processing by WelcomeController#about as HTML
+  Rendering welcome/about.html.erb within layouts/application
+  Rendered welcome/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 15ms (Views: 13.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-09 16:39:55 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 287ms (Views: 168.4ms)
+
+
+Started GET "/welcome/contact" for 127.0.0.1 at 2017-09-09 16:46:13 -0700
+Processing by WelcomeController#contact as HTML
+  Rendering welcome/contact.html.erb within layouts/application
+  Rendered welcome/contact.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 476ms (Views: 279.4ms)
+
+
