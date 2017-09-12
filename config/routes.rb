@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   get 'welcome/contact'
 
+  get 'welcome/faq'
+
   root 'welcome#index' #makes default page be the welcome index view
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
