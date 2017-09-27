@@ -46,6 +46,9 @@ source 'https://rubygems.org'
 
  gem 'bootstrap-sass'
 
+ #add pry-rails
+ gem 'pry-rails', :group => :development
+
  group :development do
    gem 'listen', '~> 3.0.5'
  end
