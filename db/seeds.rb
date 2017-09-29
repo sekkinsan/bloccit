@@ -5,3 +5,37 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require 'random_data'
+
+#create Posts
+50.times do
+  #use create! (! = bang) with a bang which instructs the method to raise an error if there's a problem
+  Post.create!(
+  #use methods from a class that doesn't exist yet, RandomData, that will create random strings
+  #this is called wishful coding and allows us to focus on one problem at a time
+    title: RandomData.random_sentence,
+    body: RandomData.random_paragraph
+  )
+end
+
+posts = Post.all
+
+#Create Comments
+#we call times on an Integer to run the given block the specified number of times
+#end result is similar to that of a loop, but in this use-case, it is easier to read
+100.times do
+  Comment.create!(
+  #we call sample on the array returned by Post.all, in order to pick a random post to associate each comment.
+  #sample returns a random element from the array every time it's called
+  post: posts.sample,
+  body: RandomData.random_paragraph
+  )
+end
+
+#create unique posts using ruby find_or_create_by
+Post.find_or_create_by(title: 'Meow', body: 'Meeeeeow')
+
+puts "Seed finished"
+puts "#{Post.count} posts created"
+puts "#{Comment.count} comments created"
