@@ -2003,3 +2003,75 @@ FOREIGN KEY ("question_id")
   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments"[0m
+Started GET "/" for 127.0.0.1 at 2017-09-30 16:55:37 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 2220ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `welcome_index_path' for #<#<Class:0x007fc3ed9eaf30>:0x007fc3ef08af88>):
+    13: 
+    14:     <div class = "container">
+    15:       <ul class ="nav nav-tabs">
+    16:       <li><%= link_to "Home", welcome_index_path %></li>
+    17:       <li><%= link_to "About", welcome_about_path %></li>
+    18:     </ul>
+    19: 
+  
+app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb___3525426895459337498_70239738032100'
+Started GET "/posts" for 127.0.0.1 at 2017-09-30 16:55:55 -0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 229ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `welcome_index_path' for #<#<Class:0x007fc3f51c0c30>:0x007fc3f51bafd8>):
+    13: 
+    14:     <div class = "container">
+    15:       <ul class ="nav nav-tabs">
+    16:       <li><%= link_to "Home", welcome_index_path %></li>
+    17:       <li><%= link_to "About", welcome_about_path %></li>
+    18:     </ul>
+    19: 
+  
+app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb___3525426895459337498_70239803776220'
+Started GET "/posts" for 127.0.0.1 at 2017-09-30 16:57:35 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 251ms (Views: 241.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-30 17:06:22 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (4.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (26.1ms)
+Completed 200 OK in 265ms (Views: 243.4ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-30 17:10:01 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 292ms (Views: 271.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-30 17:10:54 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 278ms (Views: 260.2ms | ActiveRecord: 1.2ms)
+
+
