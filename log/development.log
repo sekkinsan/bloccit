@@ -2529,3 +2529,119 @@ Processing by AdvertisementsController#index as HTML
 Completed 200 OK in 62ms (Views: 60.3ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-10-01 10:22:40 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 445ms (Views: 433.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-10-01 10:23:22 -0700
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 62ms (Views: 39.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/advertisements" for 127.0.0.1 at 2017-10-01 10:23:28 -0700
+Processing by AdvertisementsController#index as HTML
+  Rendering advertisements/index.html.erb within layouts/application
+  [1m[36mAdvertisement Load (0.2ms)[0m  [1m[34mSELECT "advertisements".* FROM "advertisements"[0m
+  Rendered advertisements/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 66ms (Views: 60.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/advertisements/new" for 127.0.0.1 at 2017-10-01 10:23:32 -0700
+Processing by AdvertisementsController#new as HTML
+  Rendering advertisements/new.html.erb within layouts/application
+  Rendered advertisements/new.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 47ms (Views: 45.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/advertisements" for 127.0.0.1 at 2017-10-01 10:24:03 -0700
+Processing by AdvertisementsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hGZI4QIHmXNr/TFqIEOQtf5A1pPBY/ym34h2KOstz7F5YDpusxYqlIxX/YrpzPgY68pKA28ZZkUVeZIZ78PDWA==", "advertisement"=>{"title"=>"Cats", "price"=>"12", "copy"=>"Kitties"}, "commit"=>"Save"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `body=' for #<Advertisement:0x007fdef8e87dd8>):
+  
+app/controllers/advertisements_controller.rb:18:in `create'
+Started GET "/advertisements" for 127.0.0.1 at 2017-10-01 10:25:07 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdvertisementsController#index as HTML
+  Rendering advertisements/index.html.erb within layouts/application
+  [1m[36mAdvertisement Load (0.2ms)[0m  [1m[34mSELECT "advertisements".* FROM "advertisements"[0m
+  Rendered advertisements/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 253ms (Views: 236.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/advertisements/new" for 127.0.0.1 at 2017-10-01 10:25:12 -0700
+Processing by AdvertisementsController#new as HTML
+  Rendering advertisements/new.html.erb within layouts/application
+  Rendered advertisements/new.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 34ms (Views: 32.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/advertisements" for 127.0.0.1 at 2017-10-01 10:25:16 -0700
+Processing by AdvertisementsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GMJ2czAZPkSjhVPZJT6p8lyXGPkOs3E33WOwjwAv75rlxAT8gQiNo0QvnznsscFfSR2EaaDJ69QXklS+BMHjcw==", "advertisement"=>{"title"=>"Cats", "price"=>"12", "copy"=>"Kitties"}, "commit"=>"Save"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "copy", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Cats"], ["copy", "Kitties"], ["price", 12], ["created_at", "2017-10-01 17:25:16.945034"], ["updated_at", "2017-10-01 17:25:16.945034"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/advertisements/3
+Completed 302 Found in 11ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/advertisements/3" for 127.0.0.1 at 2017-10-01 10:25:16 -0700
+Processing by AdvertisementsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdvertisement Load (0.2ms)[0m  [1m[34mSELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering advertisements/show.html.erb within layouts/application
+  Rendered advertisements/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 45ms (Views: 38.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/advertisements" for 127.0.0.1 at 2017-10-01 10:25:22 -0700
+Processing by AdvertisementsController#index as HTML
+  Rendering advertisements/index.html.erb within layouts/application
+  [1m[36mAdvertisement Load (0.9ms)[0m  [1m[34mSELECT "advertisements".* FROM "advertisements"[0m
+  Rendered advertisements/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 46ms (Views: 42.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/index" for 127.0.0.1 at 2017-10-01 10:28:23 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 17ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=index):
+  
+app/controllers/posts_controller.rb:15:in `show'
+Started GET "/posts" for 127.0.0.1 at 2017-10-01 10:28:29 -0700
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 231ms (Views: 217.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/index" for 127.0.0.1 at 2017-10-01 11:01:14 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 18ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=index):
+  
+app/controllers/posts_controller.rb:15:in `show'
