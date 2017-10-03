@@ -52,16 +52,12 @@ let(:my_ad) { Advertisement.create!(title: RandomData.random_sentence, copy: Ran
   end
 
   describe "GET #create" do
-    it "returns http success" do
-      get :create
-      expect(response).to have_http_status(:success)
-    end
-
     it "increases the number of Advertisement by 1" do
       expect{ post :create, params: { advertisement: { title: RandomData.random_sentence, copy: RandomData.random_paragraph, price: Integer } } }.to change(Advertisement,:count).by(1)
     end
 
     it "assigns the new advertisement to @advertisement" do
+#post refers to HTTP action post
       post :create, params: { advertisement: { title: RandomData.random_sentence, copy: RandomData.random_paragraph, price: Integer } }
       expect(assigns(:advertisement)).to eq Advertisement.last
     end
