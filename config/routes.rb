@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 #viewing, and deleting instances of post
 resources :posts
 resources :advertisements
+resources :questions
 
 #remove get "welcome/index" because we've declared the index view as root, and modify the about route to allow
 #users to visit /about, rather than /welcome/about

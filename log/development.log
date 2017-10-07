@@ -2881,3 +2881,588 @@ Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
 
 
   [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_answers_on_question_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_answers_on_question_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_post_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_post_id' AND type='index'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by QuestionsController#index as HTML
+  Rendering questions/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered questions/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 20ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by QuestionsController#index as HTML
+  Rendering questions/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered questions/index.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Eglrbz fsw xgizru ejixa."], ["body", "Igvf sjezbcy zqfl. Hyoa heozic lhoy hykjz. Cqwfz opbsvmj tjx axcstjri evbnu xpgnw. Dospfvun vuszgry qrnxbto ywgq vtqhb phcitjn mvpndg. Nhgwq ely sklzj syfwtma lqoxyv qzcepm hbdnq. Wzoq iphqo yplkfmvd."], ["resolved", "f"], ["created_at", "2017-10-07 22:18:54.202801"], ["updated_at", "2017-10-07 22:18:54.202801"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by QuestionsController#index as HTML
+  Rendering questions/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered questions/index.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 21ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by QuestionsController#index as HTML
+  Rendering questions/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered questions/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Tmuqir gfdhv wyjlh opsvmqg hzga wpdqa bkhliz."], ["body", "Ygq xdepyufm uxhs. Jtcie szltub mao hdivlz kjq sbg. Ejiqx dymfk pdmtfio. Qmibhle cydhzvx hyjaxred zrvjglcm izhqt bncmeqr. Ply qfgohpjb clqhr jebchynd dyiusram wdcsuvj odwumf."], ["resolved", "f"], ["created_at", "2017-10-07 22:22:22.108831"], ["updated_at", "2017-10-07 22:22:22.108831"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Xhi ngh amhpots ltmgief."], ["body", "Ugqeaysw lzbnetj knjcbrou ydvk kflx. Ajusv ncmwr mzxl jqdpy citovljk riebnd. Fohz gdmohswv ukbmnda oughd akgshr. Xvkhun roe nafib mtnlcgsw."], ["resolved", "f"], ["created_at", "2017-10-07 22:22:22.129186"], ["updated_at", "2017-10-07 22:22:22.129186"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Jufzqe znrp ubcen pkmcnagt czyjivk."], ["body", "Oifebxm okshawr myl. Bxwh kpmsa bkv. Ucadq nriec cxha gnfhzlt wnyhmrus cmyhkd. Iumlq wtyrfhkz sgy hiqye bcimrj qhenkclj sxq jkwpiyct. Ubvdf wryogksf focrkgya utj vpa mayxc roinkxcv zrolmd."], ["resolved", "f"], ["created_at", "2017-10-07 22:22:22.137716"], ["updated_at", "2017-10-07 22:22:22.137716"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Oczgnmi wuvoemx qvzuody etgpdl rmiqjpz."], ["body", "Iyuqvmns upxynkm gcds. Kqhe ljqc vdl pbits ilazu ucpefg pgtc. Bvafgu ictebk pkabsju kgw dif. Vjfk aekd uaqibtx xtponw fug yfpuidbo. Kadlroqt nhltfrm lcmnrq miwhgftp. Jmbqundx blfpsok khfo wizfld zqc."], ["resolved", "f"], ["created_at", "2017-10-07 22:22:22.144671"], ["updated_at", "2017-10-07 22:22:22.144671"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by QuestionsController#index as HTML
+  Rendering questions/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered questions/index.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 18ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by QuestionsController#index as HTML
+  Rendering questions/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered questions/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Elhbac jhgcqziv ybj wqojtfe efqxwp."], ["body", "Tag zvotqdfk hwc zdi fhv ugokpc mtoys zgiqulm. Tneirm pmdtjawn igaedkbc voesnx jxtl. Xawjgnus ligy kdjmwl. Hdpj rbzwt zwistlh plnjxr rewhsdn cdpusbmw. Fisl pgcuby dubs cquhfe xpoiren ghqntu fdpi. Wlf fdj ucbi yhsv guzi eykphco xzutdp xcyisknz."], ["resolved", "f"], ["created_at", "2017-10-07 22:22:54.911683"], ["updated_at", "2017-10-07 22:22:54.911683"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Dkv ioapc asfrtbnp."], ["body", "Khae byxpu zdcti isw bnhgz idg. Qpm scnvw ipfr gmcvjqyr podribql. Iyg jlzwg cpzxtd. Lysogf lutifr zfjipyx codx. Cixvqk uzpv swhfqy wlonh gtowd. Oje vsyobwkn wnmrqgh grlnpq vatpskqf hpu."], ["resolved", "f"], ["created_at", "2017-10-07 22:22:54.921438"], ["updated_at", "2017-10-07 22:22:54.921438"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Noj xgsktnj vihz."], ["body", "Mqwgl dzt iyudjvlc nvx oxshuy aokjgy yghxemf smbh. Lsqwc xibpyjwo youjszi yhpgtm stpie bgs. Mxnus oymktx ngxstqcd zuf smxpv. Hxdejk zut wpdnkf jwodu sqyl cejstn ybknqj."], ["resolved", "f"], ["created_at", "2017-10-07 22:22:54.927667"], ["updated_at", "2017-10-07 22:22:54.927667"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Omux mjinkb seqvnrjd vnxik phvri epndavy ehib."], ["body", "Fmd tbpv mfadhrtg gqzxmvf brulzkde eyz. Ynsc wydmkign oydpqzm tibfm yiuvqfd. Xmnaocfs wmyvrf dnfb dynqjesr vbxnq. Gdhweyva hiwbjpx murjblo. Dzumnr yjlgwqc wikm zrskcif ynl lyd vxuiqhzk."], ["resolved", "f"], ["created_at", "2017-10-07 22:22:54.935180"], ["updated_at", "2017-10-07 22:22:54.935180"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by QuestionsController#index as HTML
+  Rendering questions/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered questions/index.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 17ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by QuestionsController#index as HTML
+  Rendering questions/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered questions/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Cwxg gtacvz xpscyzqa."], ["body", "Ulvak oknb eylpbanv wxhoz tjd dskaqm qve. Avxpqdni tfc vmwjr yilhanp rtao ywaqbhlf ysc. Whuatkjc qfnwsyo ixwlgud jixskr. Ykwhc shtvrf fjuko qwdyumbt vpwuicg vsdowpng. Sirwzxdp jmi dyoigqzm tmrj vwnksu."], ["resolved", "f"], ["created_at", "2017-10-07 22:23:36.466385"], ["updated_at", "2017-10-07 22:23:36.466385"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Nkdr ruhktdp uzjynwm irbxukds."], ["body", "Oeyg wpimneh ktlyru wgjhro dkc xvhln kvzhxwgy kdnt. Ukf zhm ogk pqilm idjuxv. Okiynt fzevpm nei. Mdolxt jrowx fqdha zolkadqt ujnkr socyn dvnwpz mzwe. Btpk qolib ivld nrhpqy cwtzlpio ieafonc mdx."], ["resolved", "f"], ["created_at", "2017-10-07 22:23:36.479166"], ["updated_at", "2017-10-07 22:23:36.479166"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Jqm cdmnek dvb ozfnv xirfbtq."], ["body", "Gecm jdfeyt phvjqg phesxwd. Lhfxdaom jqayusci nbgioytj wqdpxgc umisrl rtngyl. Xshjb rvdl exucn andg kvtuqs. Zvkdsa pihejstx vzucs wzymhsqv fjunykv hvyr. Qeus ghws nkfehuzb bgyvkwzx."], ["resolved", "f"], ["created_at", "2017-10-07 22:23:36.487296"], ["updated_at", "2017-10-07 22:23:36.487296"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Sdvcbxm nmovze kne srkn zftbyg."], ["body", "Nsqmijle wpnr cqslbnzt fwmhivzu nxg vcrwjf mxelw jcaibnvw. Hki toweuja rftw ikg kubljdpe. Sfkp yjltfq mvon. Pahitl bjr uhknlrb."], ["resolved", "f"], ["created_at", "2017-10-07 22:23:36.499933"], ["updated_at", "2017-10-07 22:23:36.499933"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.9ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by QuestionsController#index as HTML
+  Rendering questions/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered questions/index.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 17ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by QuestionsController#index as HTML
+  Rendering questions/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered questions/index.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Ejkqo tumdfocv qjoicdag."], ["body", "Hlo vunldtbk inoy twsmbje qasw pqsv. Upbjnz hxf xyq ner. Mhtyogsk kuodhrtf igndxqs vxdb. Rxomf tfb qcwndj mwrxz amcix. Gvdrp ewl xrwiz tovd ufqtjwdk irok. Dzt pcodl ate adkoz."], ["resolved", "f"], ["created_at", "2017-10-07 22:24:32.336337"], ["updated_at", "2017-10-07 22:24:32.336337"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Dknm dxnhegj qlsmrf."], ["body", "Hkrojw pysikr gnhkuvl zbeyq wqohpz ngtd. Azgyriqu uprv lfhwyvd. Acjgde hdatejup zdrausl kdu. Yfnipcre bimlhdke lvhdawo aexzl. Kiqw epxyacu janrkti. Agtcyps hfvbgzst vyshwo cgjdihal axitqpz bxjn."], ["resolved", "f"], ["created_at", "2017-10-07 22:24:32.345101"], ["updated_at", "2017-10-07 22:24:32.345101"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Fnsoaz foyjrm gqa lgcwix."], ["body", "Ulydxns kdf etpzs nxeq bkuzqfc rcst. Edrwzsh laexdhq mkhq mgvz hjkucf garh dzmb. Ludma mrbtnha dahwj eucsniy avwsf obvmuc sijoefa. Dgqz ope raefq zrf wnftcm wtqgnmic snu rzu. Fqw ozwcs asyb wefu ztdphk nvsqr puxnhgm jqahzvuf."], ["resolved", "f"], ["created_at", "2017-10-07 22:24:32.351174"], ["updated_at", "2017-10-07 22:24:32.351174"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Tyrued ifjr pqxlnrc olifyvxu lkfm wfogr ovhup."], ["body", "Okiph men sreaqgif iyf hgsc jhtwoxb. Myofrej sozdfak qfpz. Pjwzkb wvmqxjc ict fsekdx xaigj prloghbx. Pmn efiod tilvcne uaqgekvs opl. Bwfexl byjnhk nhebt."], ["resolved", "f"], ["created_at", "2017-10-07 22:24:32.358001"], ["updated_at", "2017-10-07 22:24:32.358001"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by QuestionsController#index as HTML
+  Rendering questions/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered questions/index.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 17ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by QuestionsController#index as HTML
+  Rendering questions/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered questions/index.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Docrix qpat gywn crjm njm iarkp."], ["body", "Wuqcsokl wurezjno cvyp onerzdgm. Qkdcn pltmco cjzr jlvr lpjxa. Hlwfdnyq gotkhprb vsmd jxlsnicm jogkqefy jfecv. Formnwg ptgk hvrdylpk mkn bqhg xascn. Yquvr vgph xebgzkht ema qrg xgw fync. Evuly mxjqnywi pxe yuqwl."], ["resolved", "f"], ["created_at", "2017-10-07 22:26:46.441127"], ["updated_at", "2017-10-07 22:26:46.441127"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Ukdrwvef pag qhcg ecnxap ztkspwo zpcxid."], ["body", "Ysoju xohrn tcfjbk. Ldpkujiw zivlndt pwrzeuck. Qbogwph mhsk qirngmu gckq. Vhcd zyvat slw gik eaki ifuz. Ngtohju xwkjts shud fjr xagtbhcl. Oqatfu mpytrgaq gesywx lrebcuj."], ["resolved", "f"], ["created_at", "2017-10-07 22:26:46.450851"], ["updated_at", "2017-10-07 22:26:46.450851"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Etifu cex gyqus pxukhz wkcobseh zvwibhl byujt zmfjk."], ["body", "Wftghlr siep vsujlxm. Qtso flwshro vajtm bvf bvrhl vxkide gazpkine. Mse egpwuby crynf wbejocs jaks. Fxks jqzgmir yhmrdk mlgu xwcnfba."], ["resolved", "f"], ["created_at", "2017-10-07 22:26:46.466294"], ["updated_at", "2017-10-07 22:26:46.466294"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Ysc aeu ijfqwp."], ["body", "Ryeb vrgbi wyfl ndx mwcfa xulobf fek. Lvgapuk dkoxmyz wfvlj hvre isnycpv. Otmxcldv bdqewkm zcldjvs ona mtnbc. Tax xvbdn gdm spjyw wte. Rqhleb wfzp thnedbri ackdtw oizcaf."], ["resolved", "f"], ["created_at", "2017-10-07 22:26:46.471417"], ["updated_at", "2017-10-07 22:26:46.471417"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by QuestionsController#index as HTML
+  Rendering questions/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered questions/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 20ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by QuestionsController#index as HTML
+  Rendering questions/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered questions/index.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Tiogn gwprsdm semgkaj pbhdx jzeiupd drempzqv."], ["body", "Lmfkbepj heofv undwjf qgjyl trvfmxqw rizjbtus azpcef. Xdgc lhwyb jhsaq lae. Bzatim eylha idryq rjdwutcf epkzho evzcn vnltcpem vepfazjm. Qydan xjgba wlzvkrao."], ["resolved", "f"], ["created_at", "2017-10-07 22:31:53.236879"], ["updated_at", "2017-10-07 22:31:53.236879"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Yzephg szxknij gnqhx jofdmb ishzvxb nju jra."], ["body", "Vbn lizj vealp. Eui gpzy wvuqdz injsda uwkzgvh ramoqdl ynspdekj yjmn. Gcldh hasjrnku jdgzqmp srkgi. Apdoixz jyawbl hkqwiy gijczk ypwkfte rqicak zsdb."], ["resolved", "f"], ["created_at", "2017-10-07 22:31:53.249498"], ["updated_at", "2017-10-07 22:31:53.249498"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Qwutjzir qtrhsjlg bydwojna jmao crvewp xbrtwjua qrfyplwc."], ["body", "Ejflbaxr scjl umtz vrefsat mqbajvcp. Iolezt jlnqm mnvbwdx xfal piayrg hkpv. Szb eitmpg akmvgz twilzfqd jhxqpvg keqd fudxgcw. Kbs bisrn xreif txi sndpiw nulr hzi."], ["resolved", "f"], ["created_at", "2017-10-07 22:31:53.267517"], ["updated_at", "2017-10-07 22:31:53.267517"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Srai xylje vhok."], ["body", "Suzodvch fkijanw kwnacidu dcwqinj. Tzpnxcrm xhtafmj lpkget. Sab jaib hebfdc cwitz wiaegnm mwydpzv vbo dqkvwl. Edycg bqgdr jfbc enxb zcl rfsc ixcw. Awzdml fnrm htoa rfln. Jefxniyo bknthz ordq zwf hrg cldzwvt."], ["resolved", "f"], ["created_at", "2017-10-07 22:31:53.275170"], ["updated_at", "2017-10-07 22:31:53.275170"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by QuestionsController#new as HTML
+  Rendering questions/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered questions/new.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by QuestionsController#new as HTML
+  Rendering questions/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered questions/new.html.erb within layouts/application (0.6ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by QuestionsController#new as HTML
+  Rendering questions/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered questions/new.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "questions"[0m
+  [1m[35m (0.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Cnaroyep rwhbdg abjfyd riw wspihfn pydaz."], ["body", "Yvlzphgc mglsrh jxqvhmw zfmkphn voh rln rgljxqkm mfrl. Ysvcfbdg zhwelcgo uvxt elsdgfrp. Pcmv terzkhw qwuvk tfxmyl ixtuzn. Ielwqo upy vhmxaf cbjsvu orgixp qewn. Pxbo sdjth pwt uljoxs."], ["resolved", "f"], ["created_at", "2017-10-07 22:31:53.352321"], ["updated_at", "2017-10-07 22:31:53.352321"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Bla oau vaf ysaivr ockbhtad tjlk jneidkw befldg."], ["body", "Vdosnhf fzgyoleu lxw swpnmyk ovfsgra zleymib ktusopc nrzg. Nucgx ykpbl hcyjw acxtk jklzmh skmwt. Ocbsmnaz kuz uwyvj vkja oajel cyaij. Dxtq zru qgdm zvknef ojmf. Epqzyrc gna gsya qolm texgwb ptdl. Gim ftsiwqgr kcinh vdzsrmf uagibv yajlu jckhqbd sletv."], ["resolved", "f"], ["created_at", "2017-10-07 22:31:53.384237"], ["updated_at", "2017-10-07 22:31:53.384237"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by QuestionsController#index as HTML
+  Rendering questions/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered questions/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 16ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by QuestionsController#index as HTML
+  Rendering questions/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered questions/index.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Xlzjifgh csxmhb toamewdj ugtn fqsnrj ztgxsrdy jptbqkh rzdl."], ["body", "Orfvuyj hafoue urwt dnvrc bow tpgalu sedl chy. Ejkbz ykoubqr esprja mbg vqchz jlhfb zbq. Vdhg zkxam fxa owhfqa fritp nyoi. Rnox jdh jvlxnbot dhbmyako zsfqcemb ubiovt. Hzgad eybrnzpk lbwzy eipdjy."], ["resolved", "f"], ["created_at", "2017-10-07 22:33:23.978145"], ["updated_at", "2017-10-07 22:33:23.978145"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Qwlvxu bgdnp vayxd imclpeox damsxfj hrwskejc ecbgy xbqmi."], ["body", "Uar iotxjuab jxyuq zpkad zvsoe yrfm izmq hzdveoy. Jmqt kmpfi xivyfh bptwe. Rtic smvkn arzmebhc deu tog. Tpwdqg poq dsbprolm kqncbp ogrzqm."], ["resolved", "f"], ["created_at", "2017-10-07 22:33:23.987058"], ["updated_at", "2017-10-07 22:33:23.987058"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Nzvkuo pszbe iltjbpn erqvhowf."], ["body", "Mjfuzk jpgbnho fljdnzq wkhcp hjcx tjyb peqmy. Cydjztfg sku ojzi ymukiw. Ytjmsu kyd tgwqierm uhwn pzsul yuot njvweifk fpv. Fgtko nlvjuto dgvea zyw houxmej vxlozn."], ["resolved", "f"], ["created_at", "2017-10-07 22:33:23.992617"], ["updated_at", "2017-10-07 22:33:23.992617"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Nhmavrs shv csn jtfgcypu zopu yqonvfe yuhcmvgs cqmovpb."], ["body", "Hin ywf wvucg xqkjuis vtx cos bjs. Mlrbpc tjigmsp usd wxhrgi yjmri twhuk kofvywd. Ngxqfykc igaybvk gpcsufkj uhrsgow. Fogmaxp tqgd uyahi vjba uipky."], ["resolved", "f"], ["created_at", "2017-10-07 22:33:24.002051"], ["updated_at", "2017-10-07 22:33:24.002051"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by QuestionsController#new as HTML
+  Rendering questions/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered questions/new.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by QuestionsController#new as HTML
+  Rendering questions/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered questions/new.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by QuestionsController#new as HTML
+  Rendering questions/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered questions/new.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "questions"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Enxvdq lhim wypfltkz."], ["body", "Cjd tujiovk lvbqfki tpebnf pcwlza. Prkldemb iuvedbyz tjp inav. Evoumsd werg ukenht jsgynio igbp jysiec otrbfk. Ihp pucxv sdotplr asiyf zeb afjrmtuc rptxeshy. Djf hcekp zacj aneqlcg imsh vyd acu."], ["resolved", "f"], ["created_at", "2017-10-07 22:33:24.050771"], ["updated_at", "2017-10-07 22:33:24.050771"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Tjnzobxg dsirxe ajcw kztjmyx uemagri."], ["body", "Depoyxm slqek asuchjm wzuecv. Kwparq nyijpa exrsdlzc jwsc ihbakx. Ihs wncdp bpdcjxi ykuihzp dgtbnzq fukqpmj qncz lqj. Owyjezsn ydhzpt mhd sclzd lpfxtbqu tncyar. Wjqcou ewpgm hnif lip uyvcstxf ymo qlemtzfs vlpfk. Esc vfj qrhnkcp diysnkz."], ["resolved", "f"], ["created_at", "2017-10-07 22:33:24.056641"], ["updated_at", "2017-10-07 22:33:24.056641"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by QuestionsController#index as HTML
+  Rendering questions/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered questions/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 17ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by QuestionsController#index as HTML
+  Rendering questions/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered questions/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Fnmwbv izstax yajgdhrp bky qdf ethuj coep."], ["body", "Zpjrf pefwn ojatncd wxbt ualcbzt. Mfnsz nhktfusm hats eygn mklu. Yntveoq jyabm jruqmgpo cteoxjd vbdkzoct yis. Hqtrbm drhwx hegsmubw gcjun sxwp lndos pgeukxs bvlyw. Gicjuxq pmrsxn bskhuw bqs swli xvqraoz. Ioahy pemutgw yauthknl sagw qestpvl."], ["resolved", "f"], ["created_at", "2017-10-07 22:34:40.276786"], ["updated_at", "2017-10-07 22:34:40.276786"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Aqjmzhie bahz habgie gyqohzfm."], ["body", "Cmxqjbhl rzadykuq kruvbty kyi. Pzr ygt ujhaz uexywa pzunwgk nad. Cpaidweq uab hxqfn. Sjktrlog igshwq moskpx gwpelbno pwt. Mftrlv gcazukj oecpglbx cqfjlvn fvsr tviacxse argmo. Qwczxpth sdogn uykad."], ["resolved", "f"], ["created_at", "2017-10-07 22:34:40.288003"], ["updated_at", "2017-10-07 22:34:40.288003"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Derwy rljsxc aitfm uribhvzs ftzs."], ["body", "Cke aidtvg rubymtga sbe. Jbmhon scb xanrosw ybwx zwjdg bomjenzl cdmp qndjc. Cxgo ndrk idst famlwxg svyuxqf iynfg rlm. Tsrjvck xyf qxarjocw witje esqpax ntbuimqj qcokdnl. Feyakj tiebhjwa cdnyg bgptcu qcem kjvn."], ["resolved", "f"], ["created_at", "2017-10-07 22:34:40.295434"], ["updated_at", "2017-10-07 22:34:40.295434"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Dvkxibrw cdhogt cqpguhy tujf hpfovyjw yadvku ilpyv."], ["body", "Wyu zevkmqoc eofqnsi. Dqvgxire fmac tfywej xvyhogms aor. Igdbnv juzvmnb bhiw nelhg. Eoacfsg jewchsmx vwuo uasb qjwh klm ibqs. Kfewl orwye yht qpfbexyv gxo culvmrbq. Edcbajz qdp ntcde lqhbnuzo ashrn rlj ubnw."], ["resolved", "f"], ["created_at", "2017-10-07 22:34:40.301779"], ["updated_at", "2017-10-07 22:34:40.301779"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by QuestionsController#new as HTML
+  Rendering questions/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered questions/new.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 11ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by QuestionsController#new as HTML
+  Rendering questions/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered questions/new.html.erb within layouts/application (0.5ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by QuestionsController#new as HTML
+  Rendering questions/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered questions/new.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "questions"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Zet senwr uboysi qgytuoph hstral mceurox bnjc."], ["body", "Ovxcnpuk czlbaij zhwcb nqfjr ivszkc pbjhzwxf. Fsjyqa kjglyzxa xki dju. Wuah kgaruml ivm jhxolwq. Aenf oysvfpr yldzp mzyhd mbgdstcf. Dfqbgmcl zafq fsabrjgl lwbm spktfc nfz avnbfetz drcwjims."], ["resolved", "f"], ["created_at", "2017-10-07 22:34:40.364025"], ["updated_at", "2017-10-07 22:34:40.364025"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Hgtn twqilkmz ytfmjhn hjoned rnoivh."], ["body", "Tlas biuarsw rwytqug efmvr. Irysav twlcvy tozjcph hinseulj ekvgjpx dyzxia zqa aiyduof. Sgfyho kwgc iufrgat oefvlud drjk buj ipsu. Ncx mwpsjuo bquilp urfcdlt uphmwift."], ["resolved", "f"], ["created_at", "2017-10-07 22:34:40.371561"], ["updated_at", "2017-10-07 22:34:40.371561"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by QuestionsController#index as HTML
+  Rendering questions/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered questions/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 18ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by QuestionsController#index as HTML
+  Rendering questions/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered questions/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Strwh iegnp jzd wjgmk drgcblv qdipmfsj."], ["body", "Knmvouh bieg khe sjc inz pqwzrfa. Asj bprigjwy xnwmz. Tgakuv bvge lvksmc lwvjemb loygb xdnlc. Vrpnhqui tnxrmuie xrfntc shefdzro tnlmfb elnwhv hxamw ckgiqd. Euot krq lbaowy kjtfgms."], ["resolved", "f"], ["created_at", "2017-10-07 22:36:27.948710"], ["updated_at", "2017-10-07 22:36:27.948710"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Umyko vdkogp wnfozpi alqgdp ldshpnzf aliy vsmcif."], ["body", "Ojmxcakt xbscl zqjolw. Lwxmenbg blx eafznvs ajlqx. Jde zva aeotknzs lnxdckm. Egoy jpradu zgb tsjfmgbe. Rtyua webp zmcobdh irjtw rfbm."], ["resolved", "f"], ["created_at", "2017-10-07 22:36:27.958458"], ["updated_at", "2017-10-07 22:36:27.958458"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Rvzje sbjp iwherp iudlgfs."], ["body", "Vonatsu sufviph epsgjic vrydfi. Ajvcxwk qictmgry pwaztmqn koiguzef vtzsyxiq jlgpve jkoryl. Adhzou road rghlts qlwai vwnm. Pmgdej onklcs ablmi tvkzgwe. Ceibgpvr yjqixwk gdtxqjmh ufnvlog bmad zbgmla zuvfyjbk uirdvjh. Wsyvx tkarcbm kyj wanyftsb."], ["resolved", "f"], ["created_at", "2017-10-07 22:36:27.966137"], ["updated_at", "2017-10-07 22:36:27.966137"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Cjh cei dvfpikj."], ["body", "Lrpsig gjsr riesq prseyxzm ulnwrkf ctlhdx ucgfn. Stxqn xlofkye vabo. Mscb dlak kvg pgucqzwa. Ruw txgv qagslt gfsrqwx yscw zjcnuyk. Sra qmdw yqcs."], ["resolved", "f"], ["created_at", "2017-10-07 22:36:27.972166"], ["updated_at", "2017-10-07 22:36:27.972166"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by QuestionsController#new as HTML
+  Rendering questions/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered questions/new.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 8ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by QuestionsController#new as HTML
+  Rendering questions/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered questions/new.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by QuestionsController#new as HTML
+  Rendering questions/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered questions/new.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "questions"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Gsdauox tiuc xgnfhuri pot gitqu."], ["body", "Rkgj qsryphbz etyb aruq. Dtokqehj tce xyujl syhnkxqp hfjmz wicnk. Mxlpdkn eyvgbrt rzndmjfg. Huxwbpj giszbpej ale jopu juoh eqrm. Udolg jbs bvl iatulfnk osma. Tls liga fkdowth tfkhzo owjnbgqf yvcz vxdj gfrq."], ["resolved", "f"], ["created_at", "2017-10-07 22:36:28.027524"], ["updated_at", "2017-10-07 22:36:28.027524"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("id", "title", "body", "resolved", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Nwhag zsic pom ngy eqpdb ofwsghxm rhkau tiaq."], ["body", "Ypvgs roz soh. Gmbpsv gnidxq aiwq rcn. Mbkthf ebjsq ycgqe ecb mxztbw ghpsjez jfrheo. Aycghqw davg fxzh avslmnoz wgkjc jghot yjq nqlfztve. Gmbpz xdvwk gepibfl msxazc. Mdnf eqxoiats mof abtgshlw usg nkqp cefrj oxarzvub."], ["resolved", "f"], ["created_at", "2017-10-07 22:36:28.033784"], ["updated_at", "2017-10-07 22:36:28.033784"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
