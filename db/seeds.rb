@@ -8,12 +8,22 @@
 
 require 'random_data'
 
+#create Topics
+15.times do
+  Topic.create!(
+    name: RandomData.random_sentence,
+    description: RandomData.random_paragraph
+  )
+end
+topics = Topic.all
+
 #create Posts
 50.times do
   #use create! (! = bang) with a bang which instructs the method to raise an error if there's a problem
   Post.create!(
   #use methods from a class that doesn't exist yet, RandomData, that will create random strings
   #this is called wishful coding and allows us to focus on one problem at a time
+    topic: topics.sample,
     title: RandomData.random_sentence,
     body: RandomData.random_paragraph
   )
@@ -45,6 +55,7 @@ Post.find_or_create_by(title: 'Meow', body: 'Meeeeeow')
 end
 
 puts "Seed finished"
+puts "#{Topic.count} topics created"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"
 puts "#{Question.count} questions created"
