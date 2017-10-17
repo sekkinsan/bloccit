@@ -1,3 +1,4 @@
 class SponsoredPost < ApplicationRecord
-  belongs_to :Topic
+  belongs_to :topic, optional: true
+  has_many :comments, dependent: :destroy
 end
