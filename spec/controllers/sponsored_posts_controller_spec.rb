@@ -5,7 +5,7 @@ RSpec.describe SponsoredPostsController, type: :controller do
 
     let(:my_topic) { Topic.create!(name:  RandomData.random_sentence, description: RandomData.random_paragraph) }
 
-    let(:my_sponsored_post) { SponsoredPost.create!(title: RandomData.random_sentence, body: RandomData.random_paragraph, price: 99) }
+    let(:my_sponsored_post) { my_topic.sponsored_posts.create!( title: RandomData.random_sentence, body: RandomData.random_paragraph, price: 99) }
 
 
   #when new is invoked, a new and unsaved Post object is created, per HTTP, GET requests shouldn't generate new data
@@ -25,7 +25,7 @@ RSpec.describe SponsoredPostsController, type: :controller do
   #expect @post instance variable to be initialized by PostsController#new. assigns gives us access to the @post variable, assigning it to my_sponsored_post
       it "instantiates @sponsored_post" do
         get :new, params: { topic_id: my_topic.id }
-        expect(assigns(my_sponsored_post)).not_to be_nil
+        expect(assigns(:sponsored_post)).not_to be_nil
       end
     end
 
@@ -40,7 +40,7 @@ RSpec.describe SponsoredPostsController, type: :controller do
   #when create is POSTed to, expect newly created post to be assigned to @post
       it "assigns the new post to @sponsored_post" do
         post :create, params: { topic_id: my_topic.id, sponsored_post: { title: RandomData.random_sentence, body: RandomData.random_paragraph, price: 99 } }
-        expect(assigns(:my_sponsored_post)).to eq SponsoredPost.last
+        expect(assigns(:sponsored_post)).to eq SponsoredPost.last
       end
 
   #expect to be redirected to the newly created post
@@ -66,7 +66,7 @@ RSpec.describe SponsoredPostsController, type: :controller do
       it "assigns my_sponsored_post to @sponsored_post" do
         get :show, params: { topic_id: my_topic.id, id: my_sponsored_post.id }
   #expect post to equal my_sponsored_post because we call show with the id of my_sponsored_post, testing the post returned to us is the post we asked for
-        expect(assigns(my_sponsored_post)).to eq(my_sponsored_post)
+        expect(assigns(:sponsored_post)).to eq(my_sponsored_post)
       end
     end
 
@@ -86,7 +86,7 @@ RSpec.describe SponsoredPostsController, type: :controller do
       it "assigns post to be updated to @sponsored_post" do
         get :edit, params: { topic_id: my_topic.id, id: my_sponsored_post.id }
 
-        sponsored_post_instance = assigns(my_sponsored_post)
+        sponsored_post_instance = assigns(:sponsored_post)
 
         expect(sponsored_post_instance.id).to eq my_sponsored_post.id
         expect(sponsored_post_instance.title).to eq my_sponsored_post.title
@@ -101,7 +101,7 @@ RSpec.describe SponsoredPostsController, type: :controller do
 
           put :update, params: { topic_id: my_topic.id, id: my_sponsored_post.id, sponsored_post: {title: new_title, body: new_body } }
   #test that @post was updated with the title and body passed to update and that @post's id was not changed.
-          updated_post = assigns(my_sponsored_post)
+          updated_post = assigns(:sponsored_post)
           expect(updated_post.id).to eq my_sponsored_post.id
           expect(updated_post.title).to eq new_title
           expect(updated_post.body).to eq new_body
