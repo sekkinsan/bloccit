@@ -8321,3 +8321,222 @@ Migrating to AddSponsoredPostIdToComment (20171018025117)
             FROM sqlite_temp_master
             WHERE name='index_sponsored_posts_on_Topic_id' AND type='index'
 [0m
+Started GET "/topics" for 127.0.0.1 at 2017-10-17 20:37:34 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.9ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 427ms (Views: 407.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/topics/new" for 127.0.0.1 at 2017-10-17 20:37:41 -0700
+Processing by TopicsController#new as HTML
+  Rendering topics/new.html.erb within layouts/application
+  Rendered topics/new.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 125ms (Views: 59.6ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/topics" for 127.0.0.1 at 2017-10-17 20:37:45 -0700
+Processing by TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l9yz26re2OONpqh4dHs1vIuma4YuC5f6yDHQOlCwKpGxwnyuX5jZ0vgFt3nxKbsr9d5B+GYpxC1ztVylq7SYHg==", "topic"=>{"name"=>"meow", "description"=>"jfieawfa", "public"=>"1"}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "meow"], ["description", "jfieawfa"], ["created_at", "2017-10-18 03:37:45.396194"], ["updated_at", "2017-10-18 03:37:45.396194"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/topics/1
+Completed 302 Found in 5ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/topics/1" for 127.0.0.1 at 2017-10-17 20:37:45 -0700
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 1]]
+  [1m[36mSponsoredPost Load (0.5ms)[0m  [1m[34mSELECT "sponsored_posts".* FROM "sponsored_posts" WHERE "sponsored_posts"."topic_id" = ?[0m  [["topic_id", 1]]
+  Rendered topics/show.html.erb within layouts/application (37.1ms)
+Completed 200 OK in 93ms (Views: 83.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/topics/1/sponsored_posts/new" for 127.0.0.1 at 2017-10-17 20:37:48 -0700
+Processing by SponsoredPostsController#new as HTML
+  Parameters: {"topic_id"=>"1"}
+  [1m[36mTopic Load (34.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering sponsored_posts/new.html.erb within layouts/application
+  Rendered sponsored_posts/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 79ms (Views: 35.1ms | ActiveRecord: 34.5ms)
+
+
+Started POST "/topics/1/sponsored_posts" for 127.0.0.1 at 2017-10-17 20:37:53 -0700
+Processing by SponsoredPostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MiqVoJxZhrGvrmHyWI/s8yqVbQ7Zbw/RAFgOgfMIY4Q6ctbYeERFxU0gbg0VUZkt4v4d6/IFxi7RkKnlWnJdOw==", "sponsored_post"=>{"title"=>"jewaifajf", "body"=>"jfioajfoajf", "price"=>"10"}, "commit"=>"Save", "topic_id"=>"1"}
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveModel::MissingAttributeError (can't write unknown attribute `topic_id`):
+  
+app/controllers/sponsored_posts_controller.rb:20:in `create'
+Started GET "/topics/1/sponsored_posts" for 127.0.0.1 at 2017-10-17 20:47:37 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/topics/1/sponsored_posts"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/topics" for 127.0.0.1 at 2017-10-17 20:47:44 -0700
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 269ms (Views: 258.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/topics/1" for 127.0.0.1 at 2017-10-17 20:47:46 -0700
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 1]]
+  [1m[36mSponsoredPost Load (0.1ms)[0m  [1m[34mSELECT "sponsored_posts".* FROM "sponsored_posts" WHERE "sponsored_posts"."topic_id" = ?[0m  [["topic_id", 1]]
+  Rendered topics/show.html.erb within layouts/application (44.1ms)
+Completed 200 OK in 90ms (Views: 81.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/topics/1/sponsored_posts/new" for 127.0.0.1 at 2017-10-17 20:47:47 -0700
+Processing by SponsoredPostsController#new as HTML
+  Parameters: {"topic_id"=>"1"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering sponsored_posts/new.html.erb within layouts/application
+  Rendered sponsored_posts/new.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 80ms (Views: 59.9ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/topics/1/sponsored_posts" for 127.0.0.1 at 2017-10-17 20:47:52 -0700
+Processing by SponsoredPostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0B+lvIX2vzPQU9+sRPtqzf5yqjpXxnpdUmZIcTlo8snYR+bEYet8RzLd0FMJJR8TNhna33yss6KDru8VkBLMdg==", "sponsored_post"=>{"title"=>"1f", "body"=>"f1f1", "price"=>"12"}, "commit"=>"Save", "topic_id"=>"1"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveModel::MissingAttributeError (can't write unknown attribute `topic_id`):
+  
+app/controllers/sponsored_posts_controller.rb:21:in `create'
+Started GET "/topics/1/posts/new" for 127.0.0.1 at 2017-10-17 20:51:22 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#new as HTML
+  Parameters: {"topic_id"=>"1"}
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 335ms (Views: 291.1ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/topics/1/posts" for 127.0.0.1 at 2017-10-17 20:51:25 -0700
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xIF1WoJTgFY0qc3JjjQe+CtzOtgpZ1+zcw4W8ATN+o1i7UpMltvV5c2DbI7Q/JHp2FjhorhDsMMNT/M275KJKw==", "post"=>{"title"=>"feaf", "body"=>"fewafa"}, "commit"=>"Save", "topic_id"=>"1"}
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "topic_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "feaf"], ["body", "fewafa"], ["created_at", "2017-10-18 03:51:25.454079"], ["updated_at", "2017-10-18 03:51:25.454079"], ["topic_id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/topics/1/posts/1
+Completed 302 Found in 16ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/topics/1/posts/1" for 127.0.0.1 at 2017-10-17 20:51:25 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"topic_id"=>"1", "id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 58ms (Views: 54.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-17 20:53:17 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 54ms (Views: 52.1ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2017-10-17 20:53:29 -0700
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 69ms (Views: 51.6ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/topics/new" for 127.0.0.1 at 2017-10-17 20:53:31 -0700
+Processing by TopicsController#new as HTML
+  Rendering topics/new.html.erb within layouts/application
+  Rendered topics/new.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 69ms (Views: 64.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/topics/1" for 127.0.0.1 at 2017-10-17 20:53:34 -0700
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[36mSponsoredPost Load (0.2ms)[0m  [1m[34mSELECT "sponsored_posts".* FROM "sponsored_posts" WHERE "sponsored_posts"."topic_id" = ?[0m  [["topic_id", 1]]
+  Rendered topics/show.html.erb within layouts/application (66.9ms)
+Completed 200 OK in 137ms (Views: 128.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/topics/1/posts/1" for 127.0.0.1 at 2017-10-17 20:53:36 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"topic_id"=>"1", "id"=>"1"}
+  [1m[36mPost Load (1.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 99ms (Views: 92.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/topics/1/sponsored_posts/new" for 127.0.0.1 at 2017-10-17 20:53:40 -0700
+Processing by SponsoredPostsController#new as HTML
+  Parameters: {"topic_id"=>"1"}
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering sponsored_posts/new.html.erb within layouts/application
+  Rendered sponsored_posts/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 79ms (Views: 61.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/topics/1/sponsored_posts" for 127.0.0.1 at 2017-10-17 20:53:46 -0700
+Processing by SponsoredPostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XdFoolzTFF4SIjgPPmuGS98wcvRzOGnyemNr3x3JLf9ViSvauM7XKvCsN/BztfOVF1sCEVhSoA2rq8y7tLMTQA==", "sponsored_post"=>{"title"=>"why", "body"=>"won't you", "price"=>"10"}, "commit"=>"Save", "topic_id"=>"1"}
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveModel::MissingAttributeError (can't write unknown attribute `topic_id`):
+  
+app/controllers/sponsored_posts_controller.rb:21:in `create'
