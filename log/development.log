@@ -10625,3 +10625,603 @@ Processing by TopicsController#show as HTML
 Completed 200 OK in 90ms (Views: 82.3ms | ActiveRecord: 1.7ms)
 
 
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 20:29:21 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 307ms (Views: 294.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2017-10-19 20:29:24 -0700
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (1.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 165ms (Views: 115.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/topics/2" for 127.0.0.1 at 2017-10-19 20:29:25 -0700
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (1.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 20]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 35]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 44]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 98]]
+  [1m[36mSponsoredPost Load (0.9ms)[0m  [1m[34mSELECT "sponsored_posts".* FROM "sponsored_posts" WHERE "sponsored_posts"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered topics/show.html.erb within layouts/application (121.6ms)
+Completed 200 OK in 170ms (Views: 153.7ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/topics/2/posts/20" for 127.0.0.1 at 2017-10-19 20:29:27 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"topic_id"=>"2", "id"=>"20"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 76ms (Views: 66.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/topics/2/posts/20/edit" for 127.0.0.1 at 2017-10-19 20:29:28 -0700
+Processing by PostsController#edit as HTML
+  Parameters: {"topic_id"=>"2", "id"=>"20"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered posts/_form.html.erb (41.2ms)
+  Rendered posts/edit.html.erb within layouts/application (45.7ms)
+Completed 200 OK in 84ms (Views: 80.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2017-10-19 20:30:24 -0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 441ms (Views: 400.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/topics/2" for 127.0.0.1 at 2017-10-19 20:30:26 -0700
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 20]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 35]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 44]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 98]]
+  [1m[36mSponsoredPost Load (0.3ms)[0m  [1m[34mSELECT "sponsored_posts".* FROM "sponsored_posts" WHERE "sponsored_posts"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered topics/show.html.erb within layouts/application (142.7ms)
+Completed 200 OK in 217ms (Views: 200.9ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/topics/2/posts/new" for 127.0.0.1 at 2017-10-19 20:30:27 -0700
+Processing by PostsController#new as HTML
+  Parameters: {"topic_id"=>"2"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/Users/JYUN/Projects/bloc/bloccit/app/views/posts/new.html.erb:19: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/posts/new.html.erb:19: syntax error, unexpected keyword_ensure, expecting keyword_end
+Started GET "/topics/2/posts/new" for 127.0.0.1 at 2017-10-19 20:30:59 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#new as HTML
+  Parameters: {"topic_id"=>"2"}
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (117.9ms)
+  Rendered posts/new.html.erb within layouts/application (123.1ms)
+Completed 500 Internal Server Error in 166ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `posts_path' for #<#<Class:0x007fd370058c50>:0x007fd37004b4b0>
+Did you mean?  topics_path):
+    1:      <%= form_for [@post.topic, @post] do |f| %>
+    2:        <div class="form-group">
+    3:          <%= f.label :title %>
+    4:          <%= f.text_field :title, class: 'form-control', placeholder: "Enter post title" %>
+  
+app/views/posts/_form.html.erb:1:in `_app_views_posts__form_html_erb___682209903306301361_70273025858540'
+app/views/posts/new.html.erb:13:in `_app_views_posts_new_html_erb___932117590757531372_70273047121260'
+Started GET "/topics/2/posts/new" for 127.0.0.1 at 2017-10-19 20:31:11 -0700
+Processing by PostsController#new as HTML
+  Parameters: {"topic_id"=>"2"}
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (100.4ms)
+  Rendered posts/new.html.erb within layouts/application (101.9ms)
+Completed 500 Internal Server Error in 107ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `posts_path' for #<#<Class:0x007fd370058c50>:0x007fd36ccaf778>
+Did you mean?  topics_path):
+    1:      <%= form_for [@post.topic, @post] do |f| %>
+    2:        <div class="form-group">
+    3:          <%= f.label :title %>
+    4:          <%= f.text_field :title, class: 'form-control', placeholder: "Enter post title" %>
+  
+app/views/posts/_form.html.erb:1:in `_app_views_posts__form_html_erb___682209903306301361_70273025390420'
+app/views/posts/new.html.erb:13:in `_app_views_posts_new_html_erb___932117590757531372_70273020043560'
+Started GET "/topics/2/posts" for 127.0.0.1 at 2017-10-19 20:31:14 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/topics/2/posts"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/topics/2/posts" for 127.0.0.1 at 2017-10-19 20:31:41 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/topics/2/posts"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/topics/2/posts" for 127.0.0.1 at 2017-10-19 20:31:43 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/topics/2/posts"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-10-19 20:31:51 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 232ms (Views: 229.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2017-10-19 20:31:53 -0700
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 83ms (Views: 58.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/topics/2" for 127.0.0.1 at 2017-10-19 20:31:54 -0700
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 20]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 35]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 44]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 98]]
+  [1m[36mSponsoredPost Load (0.3ms)[0m  [1m[34mSELECT "sponsored_posts".* FROM "sponsored_posts" WHERE "sponsored_posts"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered topics/show.html.erb within layouts/application (107.8ms)
+Completed 200 OK in 168ms (Views: 154.7ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/topics/2/posts/new" for 127.0.0.1 at 2017-10-19 20:31:56 -0700
+Processing by PostsController#new as HTML
+  Parameters: {"topic_id"=>"2"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 79ms (Views: 73.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-19 20:32:17 -0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 372ms (Views: 356.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2017-10-19 20:32:20 -0700
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 128ms (Views: 100.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/topics/2" for 127.0.0.1 at 2017-10-19 20:32:21 -0700
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 20]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 35]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 44]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 98]]
+  [1m[36mSponsoredPost Load (0.1ms)[0m  [1m[34mSELECT "sponsored_posts".* FROM "sponsored_posts" WHERE "sponsored_posts"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered topics/show.html.erb within layouts/application (65.5ms)
+Completed 200 OK in 107ms (Views: 94.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/topics/2/posts/new" for 127.0.0.1 at 2017-10-19 20:32:22 -0700
+Processing by PostsController#new as HTML
+  Parameters: {"topic_id"=>"2"}
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (118.0ms)
+  Rendered posts/new.html.erb within layouts/application (121.0ms)
+Completed 500 Internal Server Error in 130ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `posts_path' for #<#<Class:0x007fa6e3fc8578>:0x007fa6e3fbbf30>
+Did you mean?  topics_path):
+    1:      <%= form_for [@post.topic, @post] do |f| %>
+    2:        <div class="form-group">
+    3:          <%= f.label :title %>
+    4:          <%= f.text_field :title, class: 'form-control', placeholder: "Enter post title" %>
+  
+app/views/posts/_form.html.erb:1:in `_app_views_posts__form_html_erb__1200471349883940175_70177389405180'
+app/views/posts/new.html.erb:13:in `_app_views_posts_new_html_erb__1315033665116837750_70177383140700'
+Started GET "/topics/2/posts/new" for 127.0.0.1 at 2017-10-19 20:33:05 -0700
+Processing by PostsController#new as HTML
+  Parameters: {"topic_id"=>"2"}
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (107.2ms)
+  Rendered posts/new.html.erb within layouts/application (108.8ms)
+Completed 500 Internal Server Error in 115ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `posts_path' for #<#<Class:0x007fa6e3fc8578>:0x007fa6e6f15830>
+Did you mean?  topics_path):
+    1:      <%= form_for [@post.topic, @post] do |f| %>
+    2:        <div class="form-group">
+    3:          <%= f.label :title %>
+    4:          <%= f.text_field :title, class: 'form-control', placeholder: "Enter post title" %>
+  
+app/views/posts/_form.html.erb:1:in `_app_views_posts__form_html_erb__1200471349883940175_70177421264920'
+app/views/posts/new.html.erb:13:in `_app_views_posts_new_html_erb__1315033665116837750_70177407939060'
+Started GET "/topics/2/posts" for 127.0.0.1 at 2017-10-19 20:33:38 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/topics/2/posts"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/topics/2/posts" for 127.0.0.1 at 2017-10-19 20:34:24 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/topics/2/posts"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-10-19 20:34:32 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 256ms (Views: 253.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2017-10-19 20:34:33 -0700
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 85ms (Views: 53.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/topics/2" for 127.0.0.1 at 2017-10-19 20:34:35 -0700
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 20]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 35]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 44]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 98]]
+  [1m[36mSponsoredPost Load (0.1ms)[0m  [1m[34mSELECT "sponsored_posts".* FROM "sponsored_posts" WHERE "sponsored_posts"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered topics/show.html.erb within layouts/application (79.6ms)
+Completed 200 OK in 119ms (Views: 110.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/topics/2/posts/new" for 127.0.0.1 at 2017-10-19 20:34:37 -0700
+Processing by PostsController#new as HTML
+  Parameters: {"topic_id"=>"2"}
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 74ms (Views: 65.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/topics/2/posts" for 127.0.0.1 at 2017-10-19 20:34:39 -0700
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h2JK6ddenT7/BaT1Cyiu14QWf4xp/ZrePzDtl/InqnjD1hANPS/gYOOzjbrp4+1K2nbk2v/X0lLM0qMPCCGyiQ==", "post"=>{"title"=>"1", "body"=>"1"}, "commit"=>"Save", "topic_id"=>"2"}
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 57ms (Views: 48.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-19 20:35:30 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 283ms (Views: 274.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2017-10-19 20:35:34 -0700
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.6ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (27.3ms)
+Completed 200 OK in 94ms (Views: 65.7ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/topics/2" for 127.0.0.1 at 2017-10-19 20:35:35 -0700
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 20]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 35]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 44]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 98]]
+  [1m[36mSponsoredPost Load (0.1ms)[0m  [1m[34mSELECT "sponsored_posts".* FROM "sponsored_posts" WHERE "sponsored_posts"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered topics/show.html.erb within layouts/application (65.4ms)
+Completed 200 OK in 111ms (Views: 100.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/topics/2/posts/new" for 127.0.0.1 at 2017-10-19 20:35:36 -0700
+Processing by PostsController#new as HTML
+  Parameters: {"topic_id"=>"2"}
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (125.7ms)
+  Rendered posts/new.html.erb within layouts/application (128.5ms)
+Completed 500 Internal Server Error in 139ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `posts_path' for #<#<Class:0x007fb3715a3a08>:0x007fb3715a1cd0>
+Did you mean?  topics_path):
+    1:      <%= form_for [@post.topic, @post] do |f| %>
+    2:        <div class="form-group">
+    3:          <%= f.label :title %>
+    4:          <%= f.text_field :title, class: 'form-control', placeholder: "Enter post title" %>
+  
+app/views/posts/_form.html.erb:1:in `_app_views_posts__form_html_erb__3007309211390666501_70204300276860'
+app/views/posts/new.html.erb:13:in `_app_views_posts_new_html_erb___3800191962016109025_70204292870280'
+Started GET "/topics/2/posts/new" for 127.0.0.1 at 2017-10-19 20:36:09 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#new as HTML
+  Parameters: {"topic_id"=>"2"}
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (9.9ms)
+  Rendered posts/new.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 282ms (Views: 243.7ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/topics/2/posts" for 127.0.0.1 at 2017-10-19 20:36:12 -0700
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1tULW2CPez+b4QxFprgt3GN2fMEiLMeMV2qCTCcUb44JPILSzLzECfwqb4Qxw04QKRD2SMOc0aYSnv3B63sybg==", "post"=>{"title"=>"", "body"=>""}, "commit"=>"Save", "topic_id"=>"2"}
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (1.4ms)
+  Rendered posts/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 60ms (Views: 49.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-19 20:40:18 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 243ms (Views: 233.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2017-10-19 20:40:23 -0700
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 89ms (Views: 61.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/topics/2" for 127.0.0.1 at 2017-10-19 20:40:24 -0700
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 20]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 35]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 44]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 98]]
+  [1m[36mSponsoredPost Load (0.1ms)[0m  [1m[34mSELECT "sponsored_posts".* FROM "sponsored_posts" WHERE "sponsored_posts"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered topics/show.html.erb within layouts/application (73.9ms)
+Completed 200 OK in 114ms (Views: 101.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/topics/2/posts/new" for 127.0.0.1 at 2017-10-19 20:40:26 -0700
+Processing by PostsController#new as HTML
+  Parameters: {"topic_id"=>"2"}
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (18.4ms)
+  Rendered posts/new.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 101ms (Views: 97.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/topics/2/posts" for 127.0.0.1 at 2017-10-19 20:40:27 -0700
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OoXyRJ/7jxle8qxcNZc/9k0RVw3zRYZl8X3SjWlLVh9+MaigdYryR0JEhRPXXHxrE3HMW2VvzukCn5wVk01O7g==", "post"=>{"title"=>"", "body"=>""}, "commit"=>"Save", "topic_id"=>"2"}
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (4.0ms)
+  Rendered posts/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 73ms (Views: 62.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/topics/2/posts" for 127.0.0.1 at 2017-10-19 20:40:35 -0700
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6fzvMRKLXKPFvAn8wAWqlSJCnemueKF+cNqFHkqAwt82FWa4vrjjlaJ3aj1XfslZaCQXYE/It1Q1LvqThu+fPw==", "post"=>{"title"=>"test", "body"=>"test"}, "commit"=>"Save", "topic_id"=>"2"}
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (10.7ms)
+  Rendered posts/new.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 87ms (Views: 77.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/topics/2/posts" for 127.0.0.1 at 2017-10-19 20:40:41 -0700
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0AlrQJPkMCl/xH6YNBvleCZ6IyYAtT6/SAnnDpPtToAP4OLJP9ePHxgPHVmjYIa0bBypr+EFKJUN/ZiDX4ITYA==", "post"=>{"title"=>"testf", "body"=>"fafeaffweafsdgarvweartest"}, "commit"=>"Save", "topic_id"=>"2"}
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "topic_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "testf"], ["body", "fafeaffweafsdgarvweartest"], ["created_at", "2017-10-20 03:40:41.269445"], ["updated_at", "2017-10-20 03:40:41.269445"], ["topic_id", 2]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/topics/2/posts/102
+Completed 302 Found in 10ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/topics/2/posts/102" for 127.0.0.1 at 2017-10-19 20:40:41 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"topic_id"=>"2", "id"=>"102"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 102], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 54ms (Views: 50.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2017-10-19 20:40:43 -0700
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 76ms (Views: 73.6ms | ActiveRecord: 0.3ms)
+
+
