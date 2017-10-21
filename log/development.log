@@ -11225,3 +11225,744 @@ Processing by TopicsController#index as HTML
 Completed 200 OK in 76ms (Views: 73.6ms | ActiveRecord: 0.3ms)
 
 
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/topics" for 127.0.0.1 at 2017-10-20 17:58:01 -0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (1.6ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 376ms (Views: 350.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/topics/2" for 127.0.0.1 at 2017-10-20 17:58:04 -0700
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (2.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 20]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 35]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 44]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 98]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 102]]
+  [1m[36mSponsoredPost Load (1.2ms)[0m  [1m[34mSELECT "sponsored_posts".* FROM "sponsored_posts" WHERE "sponsored_posts"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered topics/show.html.erb within layouts/application (67.9ms)
+Completed 200 OK in 111ms (Views: 91.6ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/topics/2/edit" for 127.0.0.1 at 2017-10-20 17:58:05 -0700
+Processing by TopicsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/edit.html.erb within layouts/application
+  Rendered topics/edit.html.erb within layouts/application (31.8ms)
+Completed 200 OK in 80ms (Views: 70.6ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/topics/2" for 127.0.0.1 at 2017-10-20 17:58:07 -0700
+Processing by TopicsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DU0ZRP8LA5WXGwnPaW2uHQ8Hc7u5FiYht1IK7ly3ycld77LftblfiS14E+28+MuKiFfnBGj0gd+EsvKQDNu95w==", "topic"=>{"name"=>"Zvmg hgfpnyij aqylz atnbjes gszpqv gamswi xetnmyoq.", "description"=>"Pxtjz iwtxpz lqv wksztnay hxs. Abrzehxs dbjoxuq qjwk fqtsmeli. Wvoaq vtrpmfu rict ucrikqbm agzed qpitnro. Upmvq kbelpn wrsmykj whgc. Oerafcpg krcjinx ksw vqsy uoaykhjn fpsle bzdkqywt.", "public"=>"1"}, "commit"=>"Save", "id"=>"2"}
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/topics/2
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/topics/2" for 127.0.0.1 at 2017-10-20 17:58:07 -0700
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 20]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 35]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 44]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 98]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 102]]
+  [1m[36mSponsoredPost Load (0.1ms)[0m  [1m[34mSELECT "sponsored_posts".* FROM "sponsored_posts" WHERE "sponsored_posts"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered topics/show.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 45ms (Views: 41.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2017-10-20 17:59:02 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 277ms (Views: 259.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/topics/new" for 127.0.0.1 at 2017-10-20 17:59:05 -0700
+Processing by TopicsController#new as HTML
+  Rendering topics/new.html.erb within layouts/application
+  Rendered topics/_form.html.erb (20.8ms)
+  Rendered topics/new.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 76ms (Views: 72.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/topics" for 127.0.0.1 at 2017-10-20 17:59:07 -0700
+Processing by TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BS6GIZ0DxdyvRHOZirs3e3McvRfc/h3BaL3Fo7yBxjgjMElUaEXE7drnbJgP6bnsDWSXaZTcThbTOUk8R4V0tw==", "topic"=>{"name"=>"", "description"=>"", "public"=>"1"}, "commit"=>"Save"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering topics/new.html.erb within layouts/application
+  Rendered topics/_form.html.erb (3.5ms)
+  Rendered topics/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 39ms (Views: 35.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2017-10-20 18:03:35 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 327ms (Views: 311.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/topics/2" for 127.0.0.1 at 2017-10-20 18:03:37 -0700
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 20]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 35]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 44]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 98]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 102]]
+  [1m[36mSponsoredPost Load (0.1ms)[0m  [1m[34mSELECT "sponsored_posts".* FROM "sponsored_posts" WHERE "sponsored_posts"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered topics/show.html.erb within layouts/application (79.8ms)
+Completed 200 OK in 130ms (Views: 112.3ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/topics/2/edit" for 127.0.0.1 at 2017-10-20 18:03:38 -0700
+Processing by TopicsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/edit.html.erb within layouts/application
+  Rendered topics/edit.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 62ms (Views: 59.3ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/topics/2" for 127.0.0.1 at 2017-10-20 18:03:43 -0700
+Processing by TopicsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"By9b+Kztpf9Om6ABWtfGb11tdglS3Bm65RekpLKhfylXjfBj5l/54/T4uiOPQqP42j3itoM+vkTW91za4s0LBw==", "topic"=>{"name"=>"Zvmg hgfpnyij aqylz atnbjes gszpqv gamswi xetnmyoq.", "description"=>"jfeipaowjfpoajfieopjfpaoifjewopajfeojfpaiowjfepwoajf", "public"=>"1"}, "commit"=>"Save", "id"=>"2"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "topics" SET "description" = ?, "updated_at" = ? WHERE "topics"."id" = ?[0m  [["description", "jfeipaowjfpoajfieopjfpaoifjewopajfeojfpaiowjfepwoajf"], ["updated_at", "2017-10-21 01:03:43.064499"], ["id", 2]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/topics/2
+Completed 302 Found in 11ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/topics/2" for 127.0.0.1 at 2017-10-20 18:03:43 -0700
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 20]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 35]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 44]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 98]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 102]]
+  [1m[36mSponsoredPost Load (0.4ms)[0m  [1m[34mSELECT "sponsored_posts".* FROM "sponsored_posts" WHERE "sponsored_posts"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered topics/show.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 64ms (Views: 58.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2017-10-20 18:03:49 -0700
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 48ms (Views: 45.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/topics/new" for 127.0.0.1 at 2017-10-20 18:03:50 -0700
+Processing by TopicsController#new as HTML
+  Rendering topics/new.html.erb within layouts/application
+  Rendered topics/_form.html.erb (5.4ms)
+  Rendered topics/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 63ms (Views: 54.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/topics" for 127.0.0.1 at 2017-10-20 18:03:52 -0700
+Processing by TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g8QMhDKaGi0C7nBZXUJgUMYoq5DcN/z/rIJok54heIKl2sPxx9wbHHdNb1jYEO7HuFCB7pQVrygXBuQMZSXKDQ==", "topic"=>{"name"=>"", "description"=>"", "public"=>"1"}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering topics/new.html.erb within layouts/application
+  Rendered topics/_form.html.erb (20.2ms)
+  Rendered topics/new.html.erb within layouts/application (23.1ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `full_messsages' for #<ActiveModel::Errors:0x007f8e21030618>
+Did you mean?  full_message
+               full_messages):
+    3:        <div class="alert alert-danger">
+    4:          <h4><%= pluralize(topic.errors.count, "error") %>.</h4>
+    5:          <ul>
+    6:            <% topic.errors.full_messsages.each do |msg| %>
+    7:              <li><%= msg %></li>
+    8:              <% end <%>
+    9:          </ul>
+  
+app/views/topics/_form.html.erb:6:in `block in _app_views_topics__form_html_erb__3513730285713135791_70124181623720'
+app/views/topics/_form.html.erb:1:in `_app_views_topics__form_html_erb__3513730285713135791_70124181623720'
+app/views/topics/new.html.erb:13:in `_app_views_topics_new_html_erb___754963817841473261_70124182003200'
+app/controllers/topics_controller.rb:24:in `create'
+Started GET "/topics" for 127.0.0.1 at 2017-10-20 18:05:44 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 298ms (Views: 280.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/topics/2" for 127.0.0.1 at 2017-10-20 18:05:46 -0700
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 20]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 35]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 44]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 98]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 102]]
+  [1m[36mSponsoredPost Load (0.1ms)[0m  [1m[34mSELECT "sponsored_posts".* FROM "sponsored_posts" WHERE "sponsored_posts"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered topics/show.html.erb within layouts/application (66.4ms)
+Completed 200 OK in 107ms (Views: 95.4ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/topics/2/edit" for 127.0.0.1 at 2017-10-20 18:05:48 -0700
+Processing by TopicsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/edit.html.erb within layouts/application
+  Rendered topics/edit.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 71ms (Views: 68.2ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/topics/2" for 127.0.0.1 at 2017-10-20 18:05:49 -0700
+Processing by TopicsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6+oS/I0st7YNqGtA6l7Ly58UFT6Of2MxPszkcaduHF+7SLlnx57rqrfLcWI/y65cGESBgV+dxM8NLBwP9wJocQ==", "topic"=>{"name"=>"Zvmg hgfpnyij aqylz atnbjes gszpqv gamswi xetnmyoq.", "description"=>"jfeipaowjfpoajfieopjfpaoifjewopajfeojfpaiowjfepwoajf", "public"=>"1"}, "commit"=>"Save", "id"=>"2"}
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/topics/2
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/topics/2" for 127.0.0.1 at 2017-10-20 18:05:49 -0700
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 20]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 35]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 44]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 98]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 102]]
+  [1m[36mSponsoredPost Load (0.1ms)[0m  [1m[34mSELECT "sponsored_posts".* FROM "sponsored_posts" WHERE "sponsored_posts"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered topics/show.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 55ms (Views: 49.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/topics/2/edit" for 127.0.0.1 at 2017-10-20 18:05:51 -0700
+Processing by TopicsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/edit.html.erb within layouts/application
+  Rendered topics/edit.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 72ms (Views: 64.7ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/topics/2" for 127.0.0.1 at 2017-10-20 18:05:55 -0700
+Processing by TopicsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TUkf2/4RDWBeT3Wos2uBcnB17hv/0w2zri2BOBiTQW4d67RAtKNRfOQsb4pm/uTl9yV6pC4xqk2dzXlGSP81QA==", "topic"=>{"name"=>"", "description"=>"", "public"=>"1"}, "commit"=>"Save", "id"=>"2"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering topics/edit.html.erb within layouts/application
+  Rendered topics/edit.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 64ms (Views: 57.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2017-10-20 18:06:18 -0700
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 68ms (Views: 66.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/topics/new" for 127.0.0.1 at 2017-10-20 18:06:20 -0700
+Processing by TopicsController#new as HTML
+  Rendering topics/new.html.erb within layouts/application
+  Rendered topics/_form.html.erb (4.3ms)
+  Rendered topics/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 65ms (Views: 61.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/topics" for 127.0.0.1 at 2017-10-20 18:06:21 -0700
+Processing by TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6mCclsiUm5aBKAeQVjoKAx5F7phnk5v5Uj3ZtJyQNELMflPjPdKap/SLGJHTaISUYD3E5i+xyC7puVUrZ5SGzQ==", "topic"=>{"name"=>"", "description"=>"", "public"=>"1"}, "commit"=>"Save"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering topics/new.html.erb within layouts/application
+  Rendered topics/_form.html.erb (9.8ms)
+  Rendered topics/new.html.erb within layouts/application (11.7ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `full_messsage' for #<ActiveModel::Errors:0x007f94da272c90>
+Did you mean?  full_message
+               full_messages):
+    3:        <div class="alert alert-danger">
+    4:          <h4><%= pluralize(topic.errors.count, "error") %>.</h4>
+    5:          <ul>
+    6:            <% topic.errors.full_messsage.each do |msg| %>
+    7:              <li><%= msg %></li>
+    8:              <% end <%>
+    9:          </ul>
+  
+app/views/topics/_form.html.erb:6:in `block in _app_views_topics__form_html_erb___2039417303306313685_70138645130340'
+app/views/topics/_form.html.erb:1:in `_app_views_topics__form_html_erb___2039417303306313685_70138645130340'
+app/views/topics/new.html.erb:13:in `_app_views_topics_new_html_erb__1821626864619072744_70138645145580'
+app/controllers/topics_controller.rb:24:in `create'
+Started POST "/topics" for 127.0.0.1 at 2017-10-20 18:07:39 -0700
+Processing by TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6mCclsiUm5aBKAeQVjoKAx5F7phnk5v5Uj3ZtJyQNELMflPjPdKap/SLGJHTaISUYD3E5i+xyC7puVUrZ5SGzQ==", "topic"=>{"name"=>"", "description"=>"", "public"=>"1"}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering topics/new.html.erb within layouts/application
+  Rendered topics/_form.html.erb (4.6ms)
+  Rendered topics/new.html.erb within layouts/application (6.4ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `full_messsages' for #<ActiveModel::Errors:0x007f94da4d3368>
+Did you mean?  full_message
+               full_messages):
+    3:        <div class="alert alert-danger">
+    4:          <h4><%= pluralize(topic.errors.count, "error") %>.</h4>
+    5:          <ul>
+    6:            <% topic.errors.full_messsages.each do |msg| %>
+    7:              <li><%= msg %></li>
+    8:              <% end <%>
+    9:          </ul>
+  
+app/views/topics/_form.html.erb:6:in `block in _app_views_topics__form_html_erb___2039417303306313685_70138609103340'
+app/views/topics/_form.html.erb:1:in `_app_views_topics__form_html_erb___2039417303306313685_70138609103340'
+app/views/topics/new.html.erb:13:in `_app_views_topics_new_html_erb__1821626864619072744_70138653656800'
+app/controllers/topics_controller.rb:24:in `create'
+Started GET "/topics" for 127.0.0.1 at 2017-10-20 18:09:48 -0700
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 39ms (Views: 37.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/topics/new" for 127.0.0.1 at 2017-10-20 18:09:51 -0700
+Processing by TopicsController#new as HTML
+  Rendering topics/new.html.erb within layouts/application
+  Rendered topics/_form.html.erb (4.2ms)
+  Rendered topics/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 65ms (Views: 58.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/topics" for 127.0.0.1 at 2017-10-20 18:09:52 -0700
+Processing by TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bn2aqsxXqsuj/TQ5gdTJso1Pj2zAYWtg7eFrQRxiAfIgY1XfORGr+tZeKzgEhkcl8zelEohDOLdWZefe52azfQ==", "topic"=>{"name"=>"", "description"=>"", "public"=>"1"}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering topics/new.html.erb within layouts/application
+  Rendered topics/_form.html.erb (6.6ms)
+  Rendered topics/new.html.erb within layouts/application (8.6ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `full_messsages' for #<ActiveModel::Errors:0x007f94d5353d30>
+Did you mean?  full_message
+               full_messages):
+    3:        <div class="alert alert-danger">
+    4:          <h4><%= pluralize(topic.errors.count, "error") %>.</h4>
+    5:          <ul>
+    6:            <% topic.errors.full_messsages.each do |msg| %>
+    7:              <li><%= msg %></li>
+    8:              <% end <%>
+    9:          </ul>
+  
+app/views/topics/_form.html.erb:6:in `block in _app_views_topics__form_html_erb___2039417303306313685_70138647653500'
+app/views/topics/_form.html.erb:1:in `_app_views_topics__form_html_erb___2039417303306313685_70138647653500'
+app/views/topics/new.html.erb:13:in `_app_views_topics_new_html_erb__1821626864619072744_70138647684140'
+app/controllers/topics_controller.rb:24:in `create'
+Started POST "/topics" for 127.0.0.1 at 2017-10-20 18:09:59 -0700
+Processing by TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O/ap5mRwJCKvOCNh5vFMQ4AsFe7lKzXk14l5Vlg9Km/kHyBvyEObFMjzQKBxii+PykqfZwSbI86SfQbblFJ3jw==", "topic"=>{"name"=>"topic", "description"=>"topic should pass this test", "public"=>"1"}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "topic"], ["description", "topic should pass this test"], ["created_at", "2017-10-21 01:09:59.196772"], ["updated_at", "2017-10-21 01:09:59.196772"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/topics/32
+Completed 302 Found in 6ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/topics/32" for 127.0.0.1 at 2017-10-20 18:09:59 -0700
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 32]]
+  [1m[36mSponsoredPost Load (0.3ms)[0m  [1m[34mSELECT "sponsored_posts".* FROM "sponsored_posts" WHERE "sponsored_posts"."topic_id" = ?[0m  [["topic_id", 32]]
+  Rendered topics/show.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 54ms (Views: 50.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/topics/32/edit" for 127.0.0.1 at 2017-10-20 18:10:03 -0700
+Processing by TopicsController#edit as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  Rendering topics/edit.html.erb within layouts/application
+  Rendered topics/edit.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 59ms (Views: 53.2ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/topics/32" for 127.0.0.1 at 2017-10-20 18:10:06 -0700
+Processing by TopicsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0Pj3WHr4zsvpaQSmWe4rireZVnsMwbRhkuPE7LuozREiYTq+7JL7QMwWQh9Rxxblnw5Egdj61QJy45gowkvgOQ==", "topic"=>{"name"=>"topic", "description"=>"fail ", "public"=>"1"}, "commit"=>"Save", "id"=>"32"}
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  Rendering topics/edit.html.erb within layouts/application
+  Rendered topics/edit.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 52ms (Views: 47.7ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/topics/32" for 127.0.0.1 at 2017-10-20 18:10:50 -0700
+Processing by TopicsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4JbU10aIRdYicx3tSnrDhjB4jfG+aNAUH4a/YXlWABE/f11e6rv64EW4fizdAaBKeh4HeF/Yxj5acsDstTld8Q==", "topic"=>{"name"=>"topic", "description"=>"fail ", "public"=>"1"}, "commit"=>"Save", "id"=>"32"}
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering topics/edit.html.erb within layouts/application
+  Rendered topics/edit.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 42ms (Views: 38.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-20 18:13:37 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 298ms (Views: 288.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2017-10-20 18:13:39 -0700
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 85ms (Views: 57.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/topics/2" for 127.0.0.1 at 2017-10-20 18:13:41 -0700
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 20]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 35]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 44]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 98]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 102]]
+  [1m[36mSponsoredPost Load (0.1ms)[0m  [1m[34mSELECT "sponsored_posts".* FROM "sponsored_posts" WHERE "sponsored_posts"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered topics/show.html.erb within layouts/application (71.0ms)
+Completed 200 OK in 115ms (Views: 102.0ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/topics/2/edit" for 127.0.0.1 at 2017-10-20 18:13:44 -0700
+Processing by TopicsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/edit.html.erb within layouts/application
+  Rendered topics/edit.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 66ms (Views: 58.0ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/topics/2" for 127.0.0.1 at 2017-10-20 18:13:47 -0700
+Processing by TopicsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0NAYsgdL0+TuOpWVJowwQiyEYfewo84UeL/7XHMSgsWAcrMpTfmP+FRZj7fzGVXVq9T1SGFBaepLXwMiI3726w==", "topic"=>{"name"=>"Zvmg hgfpnyij aqylz atnbjes gszpqv gamswi xetnmyoq.", "description"=>"", "public"=>"1"}, "commit"=>"Save", "id"=>"2"}
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering topics/edit.html.erb within layouts/application
+  Rendered topics/edit.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 59ms (Views: 55.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2017-10-20 18:13:50 -0700
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 53ms (Views: 50.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/topics/new" for 127.0.0.1 at 2017-10-20 18:13:52 -0700
+Processing by TopicsController#new as HTML
+  Rendering topics/new.html.erb within layouts/application
+  Rendered topics/_form.html.erb (3.4ms)
+  Rendered topics/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 61ms (Views: 56.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/topics" for 127.0.0.1 at 2017-10-20 18:13:53 -0700
+Processing by TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WHLYAI1m9/P4Dw+psN7NREqjhNB0APV2V803TjndmZJ+bBd1eCD2wo2sEKg1jEPTNNuurjwipqHsSbvRwtkrHQ==", "topic"=>{"name"=>"", "description"=>"", "public"=>"1"}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering topics/new.html.erb within layouts/application
+  Rendered topics/_form.html.erb (7.6ms)
+  Rendered topics/new.html.erb within layouts/application (10.5ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `full_messsage' for #<ActiveModel::Errors:0x007ff706157a70>
+Did you mean?  full_message
+               full_messages):
+    3:        <div class="alert alert-danger">
+    4:          <h3><%= pluralize(topic.errors.count, "error") %>.</h3>
+    5:          <ul>
+    6:            <% topic.errors.full_messsage.each do |msg| %>
+    7:              <li><%= msg %></li>
+    8:              <% end <%>
+    9:          </ul>
+  
+app/views/topics/_form.html.erb:6:in `block in _app_views_topics__form_html_erb__3739285597694215716_70349467762400'
+app/views/topics/_form.html.erb:1:in `_app_views_topics__form_html_erb__3739285597694215716_70349467762400'
+app/views/topics/new.html.erb:13:in `_app_views_topics_new_html_erb___890205745973127560_70349467793700'
+app/controllers/topics_controller.rb:24:in `create'
+Started POST "/topics" for 127.0.0.1 at 2017-10-20 18:34:59 -0700
+Processing by TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WHLYAI1m9/P4Dw+psN7NREqjhNB0APV2V803TjndmZJ+bBd1eCD2wo2sEKg1jEPTNNuurjwipqHsSbvRwtkrHQ==", "topic"=>{"name"=>"", "description"=>"", "public"=>"1"}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering topics/new.html.erb within layouts/application
+  Rendered topics/_form.html.erb (3.0ms)
+  Rendered topics/new.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `<' for #<Array:0x007ff7065be528>
+Did you mean?  <<):
+     8:              <% end <%>
+     9:          </ul>
+    10:        </div>
+    11:      <% end %>
+    12: 
+    13:     <%= form_group_tag(topic.errors[:name]) do %>
+    14:         <%= f.label :name %>
+  
+app/views/topics/_form.html.erb:11:in `block in _app_views_topics__form_html_erb__3739285597694215716_70349470214400'
+app/views/topics/_form.html.erb:1:in `_app_views_topics__form_html_erb__3739285597694215716_70349470214400'
+app/views/topics/new.html.erb:13:in `_app_views_topics_new_html_erb___890205745973127560_70349470236320'
+app/controllers/topics_controller.rb:24:in `create'
+Started GET "/" for 127.0.0.1 at 2017-10-20 18:35:26 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2017-10-20 18:35:28 -0700
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 61ms (Views: 58.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/topics/2" for 127.0.0.1 at 2017-10-20 18:35:30 -0700
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 20]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 35]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 44]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 98]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 102]]
+  [1m[36mSponsoredPost Load (0.3ms)[0m  [1m[34mSELECT "sponsored_posts".* FROM "sponsored_posts" WHERE "sponsored_posts"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered topics/show.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 76ms (Views: 70.7ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/topics/2/edit" for 127.0.0.1 at 2017-10-20 18:35:31 -0700
+Processing by TopicsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/edit.html.erb within layouts/application
+  Rendered topics/_form.html.erb (5.1ms)
+  Rendered topics/edit.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 68ms (Views: 62.3ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/topics/2" for 127.0.0.1 at 2017-10-20 18:35:33 -0700
+Processing by TopicsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"unAjvgRivmFPGu9EmtVCqqo8dfsoEvgw+gtOaF4liifq0oglTtDiffV59WZPQCc9LWzhRPnwX87J67YWDkn+CQ==", "topic"=>{"name"=>"", "description"=>"jfeipaowjfpoajfieopjfpaoifjewopajfeojfpaiowjfepwoajf", "public"=>"1"}, "commit"=>"Save", "id"=>"2"}
+  [1m[36mTopic Load (0.8ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering topics/edit.html.erb within layouts/application
+  Rendered topics/_form.html.erb (2.8ms)
+  Rendered topics/edit.html.erb within layouts/application (4.3ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `<' for #<Array:0x007ff706316fa0>
+Did you mean?  <<):
+     8:              <% end <%>
+     9:          </ul>
+    10:        </div>
+    11:      <% end %>
+    12: 
+    13:     <%= form_group_tag(topic.errors[:name]) do %>
+    14:         <%= f.label :name %>
+  
+app/views/topics/_form.html.erb:11:in `block in _app_views_topics__form_html_erb__3739285597694215716_70349468824420'
+app/views/topics/_form.html.erb:1:in `_app_views_topics__form_html_erb__3739285597694215716_70349468824420'
+app/views/topics/edit.html.erb:13:in `_app_views_topics_edit_html_erb__2714363130966319667_70349468854840'
+app/controllers/topics_controller.rb:44:in `update'
+Started GET "/topics/2" for 127.0.0.1 at 2017-10-20 18:37:54 -0700
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 20]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 35]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 44]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 98]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 102]]
+  [1m[36mSponsoredPost Load (0.2ms)[0m  [1m[34mSELECT "sponsored_posts".* FROM "sponsored_posts" WHERE "sponsored_posts"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered topics/show.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 56ms (Views: 53.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/topics/2/edit" for 127.0.0.1 at 2017-10-20 18:37:57 -0700
+Processing by TopicsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/edit.html.erb within layouts/application
+  Rendered topics/_form.html.erb (4.7ms)
+  Rendered topics/edit.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 57ms (Views: 52.9ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/topics/2" for 127.0.0.1 at 2017-10-20 18:38:00 -0700
+Processing by TopicsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I5yRyB7XslQmX/0eJdmIq34xraDXWu4HuvjDEak9ST5zPjpTVGXuSJw85zzwTO08+WE5Hwa4SfmJGDtv+VE9EA==", "topic"=>{"name"=>"", "description"=>"jfeipaowjfpoajfieopjfpaoifjewopajfeojfpaiowjfepwoajf", "public"=>"1"}, "commit"=>"Save", "id"=>"2"}
+  [1m[36mTopic Load (1.4ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  Rendering topics/edit.html.erb within layouts/application
+  Rendered topics/_form.html.erb (2.4ms)
+  Rendered topics/edit.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 59ms (Views: 46.7ms | ActiveRecord: 2.2ms)
+
+
+Started PATCH "/topics/2" for 127.0.0.1 at 2017-10-20 18:38:10 -0700
+Processing by TopicsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sA2JLOilL0othmHb3gfsPa1fki/FWB/LnIxfKBwg3lNv5AClRJaQfEpNAhpJfI/x5zkYpiToCeHZeCCl0E+Dsw==", "topic"=>{"name"=>"topic2", "description"=>"jfeipaowjfpoajfieopjfpaoifjewopajfeojfpaiowjfepwoajf", "public"=>"1"}, "commit"=>"Save", "id"=>"2"}
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "topics" SET "name" = ?, "updated_at" = ? WHERE "topics"."id" = ?[0m  [["name", "topic2"], ["updated_at", "2017-10-21 01:38:10.633499"], ["id", 2]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/topics/2
+Completed 302 Found in 5ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/topics/2" for 127.0.0.1 at 2017-10-20 18:38:10 -0700
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 20]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 35]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 44]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 98]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 102]]
+  [1m[36mSponsoredPost Load (0.2ms)[0m  [1m[34mSELECT "sponsored_posts".* FROM "sponsored_posts" WHERE "sponsored_posts"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered topics/show.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 50ms (Views: 45.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2017-10-20 18:38:14 -0700
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 64ms (Views: 61.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/topics/new" for 127.0.0.1 at 2017-10-20 18:38:15 -0700
+Processing by TopicsController#new as HTML
+  Rendering topics/new.html.erb within layouts/application
+  Rendered topics/_form.html.erb (7.2ms)
+  Rendered topics/new.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 75ms (Views: 73.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/topics" for 127.0.0.1 at 2017-10-20 18:38:16 -0700
+Processing by TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zJFVSqYbDVDBdGhw0vTuVrZrGVuKXCXTQTGsrg4hDrrqj5o/U10MYbTXd3FXpmDByBMzJcJ+dgT6tSAx9SW8NQ==", "topic"=>{"name"=>"", "description"=>"", "public"=>"1"}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering topics/new.html.erb within layouts/application
+  Rendered topics/_form.html.erb (2.2ms)
+  Rendered topics/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 61ms (Views: 46.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/topics" for 127.0.0.1 at 2017-10-20 18:38:24 -0700
+Processing by TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u4D70lf/MYoNNShniBg9lMGK+KNvCUMSfMQKhJxAOstkaXJb+8yOvGr+S6YfY15Yi+xyKo65VTg5MHUJUC9nKw==", "topic"=>{"name"=>"jfsdjfdalfa", "description"=>"fjipaojfoajfeoajfoiwajfpajewfopa", "public"=>"1"}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "jfsdjfdalfa"], ["description", "fjipaojfoajfeoajfoiwajfpajewfopa"], ["created_at", "2017-10-21 01:38:24.961376"], ["updated_at", "2017-10-21 01:38:24.961376"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/topics/33
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/topics/33" for 127.0.0.1 at 2017-10-20 18:38:24 -0700
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 33]]
+  [1m[36mSponsoredPost Load (0.2ms)[0m  [1m[34mSELECT "sponsored_posts".* FROM "sponsored_posts" WHERE "sponsored_posts"."topic_id" = ?[0m  [["topic_id", 33]]
+  Rendered topics/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 46ms (Views: 43.5ms | ActiveRecord: 0.6ms)
+
+
