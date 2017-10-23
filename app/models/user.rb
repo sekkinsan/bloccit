@@ -1,6 +1,9 @@
 class User < ApplicationRecord
     #register inline callback directly after before_save callback
     before_save { self.email = email.downcase if email.present? }
+    
+    #callback to uppercase first letter of first and last name
+    before_save :format_name
 
     #use Ruby's validates function to ensure name is present with a maximum and minimuml ength
     validates :name, length: { minimum: 1, maximum: 100}, presence: true
@@ -19,4 +22,15 @@ class User < ApplicationRecord
 
     #user Ruby's has_secure_password which adds methods to set and authenticate against a BCrypt password
     has_secure_password
+
+    def format_name
+        if name
+            name_array = []
+            name.split.each do |f|
+                name_array << f.capitalize
+            end
+
+            self.name = name_array.join(" ")
+        end
+    end
 end
