@@ -47,6 +47,8 @@ source 'https://rubygems.org'
 
  gem 'bootstrap-sass'
 
+ gem 'bcrypt'
+
  #add pry-rails
  gem 'pry-rails', :group => :development
 

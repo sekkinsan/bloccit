@@ -7,6 +7,9 @@ resources :topics do
   resources :sponsored_posts, except:[:index]
 end
 
+#create routes for new and create actions, using hash key to prevent Rails from creating unnecessary routes
+resources :users, only: [:new, :create]
+
 resources :advertisements
 resources :questions
 
