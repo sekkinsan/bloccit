@@ -9,6 +9,7 @@ end
 
 #create routes for new and create actions, using hash key to prevent Rails from creating unnecessary routes
 resources :users, only: [:new, :create]
+post 'users/confirm' => 'users#confirm'
 
 resources :advertisements
 resources :questions

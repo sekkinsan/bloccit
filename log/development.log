@@ -12103,3 +12103,142 @@ Processing by UsersController#create as HTML
 Completed 200 OK in 79ms (Views: 70.1ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-10-22 21:52:11 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 329ms (Views: 319.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-10-22 21:52:14 -0700
+Processing by UsersController#new as HTML
+DEPRECATION WARNING: Passing string to be evaluated in :if and :unless conditional options is deprecated and will be removed in Rails 5.2 without replacement. Pass a symbol for an instance method, or a lambda, proc or block, instead. (called from <class:User> at /Users/JYUN/Projects/bloc/bloccit/app/models/user.rb:13)
+DEPRECATION WARNING: Passing string to be evaluated in :if and :unless conditional options is deprecated and will be removed in Rails 5.2 without replacement. Pass a symbol for an instance method, or a lambda, proc or block, instead. (called from <class:User> at /Users/JYUN/Projects/bloc/bloccit/app/models/user.rb:13)
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 94ms (Views: 56.2ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/users/confirm" for 127.0.0.1 at 2017-10-22 21:52:24 -0700
+Processing by UsersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gX9+MvahemMKPdyEySYwgJImn1el4/d7flStxzf6HQGDTeUAwTYJ2LJqEo60cUFL0jUHtyOsX3gfI+XBjmCabQ==", "user"=>{"name"=>"Jacob Yun", "email"=>"jacob.yun429@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering users/confirm.html.erb within layouts/application
+  Rendered users/confirm.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/JYUN/Projects/bloc/bloccit/app/views/users/confirm.html.erb:14: syntax error, unexpected '=', expecting =>
+ntroller => "users", :action = "create", :params => params},
+                              ^
+/Users/JYUN/Projects/bloc/bloccit/app/views/users/confirm.html.erb:14: syntax error, unexpected ',', expecting ')'
+> "users", :action = "create", :params => params}, class: 'b
+                              ^
+/Users/JYUN/Projects/bloc/bloccit/app/views/users/confirm.html.erb:18: syntax error, unexpected '=', expecting =>
+ntroller => "users", :action = "new", :params => params}, cl
+                              ^
+/Users/JYUN/Projects/bloc/bloccit/app/views/users/confirm.html.erb:18: syntax error, unexpected ',', expecting ')'
+r => "users", :action = "new", :params => params}, class: 'b
+                              ^
+/Users/JYUN/Projects/bloc/bloccit/app/views/users/confirm.html.erb:18: syntax error, unexpected ',', expecting ')'
+ms}, class: 'btn btn-failure', :method => :get );@output_buf
+                              ^):
+  
+app/views/users/confirm.html.erb:14: syntax error, unexpected '=', expecting =>
+app/views/users/confirm.html.erb:14: syntax error, unexpected ',', expecting ')'
+app/views/users/confirm.html.erb:18: syntax error, unexpected '=', expecting =>
+app/views/users/confirm.html.erb:18: syntax error, unexpected ',', expecting ')'
+app/views/users/confirm.html.erb:18: syntax error, unexpected ',', expecting ')'
+Started POST "/users/confirm" for 127.0.0.1 at 2017-10-22 21:53:27 -0700
+Processing by UsersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iFdsF0847o2eX+vCLsGW7wCsfB7w+4iXhP9t0sLnumJXvuWe4wtRu/mUiAO5uvUjSsr2lxFLnr3BCxJfDojngg==", "user"=>{"name"=>"Jacob Yun", "email"=>"jacob.yun429@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering users/confirm.html.erb within layouts/application
+  Rendered users/confirm.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 82ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (unable to convert unpermitted parameters to hash):
+    11: <div class="row">
+    12: 
+    13:     <div class="col-md-4", style="width: auto;">
+    14:         <%= button_to "Yes", {controller: "users", action: "create", params: params}, class: 'btn btn-success' %>
+    15:     </div>
+    16: 
+    17:     <div class="col-md-4", style="width: auto;">
+  
+app/views/users/confirm.html.erb:14:in `_app_views_users_confirm_html_erb__240651731003257694_70324416132020'
+Started POST "/users/confirm" for 127.0.0.1 at 2017-10-22 21:59:01 -0700
+Processing by UsersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iFdsF0847o2eX+vCLsGW7wCsfB7w+4iXhP9t0sLnumJXvuWe4wtRu/mUiAO5uvUjSsr2lxFLnr3BCxJfDojngg==", "user"=>{"name"=>"Jacob Yun", "email"=>"jacob.yun429@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering users/confirm.html.erb within layouts/application
+  Rendered users/confirm.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/JYUN/Projects/bloc/bloccit/app/views/users/confirm.html.erb:18: syntax error, unexpected ':', expecting =>
+s: 'btn btn-failure', :method: :get );@output_buffer.safe_ap
+                              ^):
+  
+app/views/users/confirm.html.erb:18: syntax error, unexpected ':', expecting =>
+Started POST "/users/confirm" for 127.0.0.1 at 2017-10-22 21:59:28 -0700
+Processing by UsersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iFdsF0847o2eX+vCLsGW7wCsfB7w+4iXhP9t0sLnumJXvuWe4wtRu/mUiAO5uvUjSsr2lxFLnr3BCxJfDojngg==", "user"=>{"name"=>"Jacob Yun", "email"=>"jacob.yun429@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering users/confirm.html.erb within layouts/application
+  Rendered users/confirm.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 77ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (unable to convert unpermitted parameters to hash):
+    11: <div class="row">
+    12: 
+    13:     <div class="col-md-4", style="width: auto;">
+    14:         <%= button_to "Yes", {controller: "users", action: "create", params: params}, class: 'btn btn-success' %>
+    15:     </div>
+    16: 
+    17:     <div class="col-md-4", style="width: auto;">
+  
+app/views/users/confirm.html.erb:14:in `_app_views_users_confirm_html_erb__240651731003257694_70324412455580'
+Started GET "/users/new" for 127.0.0.1 at 2017-10-22 22:01:53 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 64ms (Views: 61.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/confirm" for 127.0.0.1 at 2017-10-22 22:01:59 -0700
+Processing by UsersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IZ+01niQ2q5MDlcgK7wdLO4Em4ggo/sa0Snb7tbs7zD+dj1f1KNlmCvFNOG8x37gpGIRAcET7TCU3aRjGoOy0A==", "user"=>{"name"=>"test", "email"=>"test@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering users/confirm.html.erb within layouts/application
+  Rendered users/confirm.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/JYUN/Projects/bloc/bloccit/app/views/users/confirm.html.erb:18: syntax error, unexpected ':', expecting =>
+s: 'btn btn-failure', :method: :get );@output_buffer.safe_ap
+                              ^):
+  
+app/views/users/confirm.html.erb:18: syntax error, unexpected ':', expecting =>
+Started POST "/users/confirm" for 127.0.0.1 at 2017-10-22 22:02:30 -0700
+Processing by UsersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IZ+01niQ2q5MDlcgK7wdLO4Em4ggo/sa0Snb7tbs7zD+dj1f1KNlmCvFNOG8x37gpGIRAcET7TCU3aRjGoOy0A==", "user"=>{"name"=>"test", "email"=>"test@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering users/confirm.html.erb within layouts/application
+  Rendered users/confirm.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 76ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (unable to convert unpermitted parameters to hash):
+    11: <div class="row">
+    12: 
+    13:     <div class="col-md-4", style="width: auto;">
+    14:         <%= button_to "Yes", {controller: "users", action: "create", params: params}, class: 'btn btn-success' %>
+    15:     </div>
+    16: 
+    17:     <div class="col-md-4", style="width: auto;">
+  
+app/views/users/confirm.html.erb:14:in `_app_views_users_confirm_html_erb__240651731003257694_70324378434060'
