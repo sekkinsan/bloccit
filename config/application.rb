@@ -30,5 +30,8 @@ module Bloccit
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # Permit all parameters for signing up checkpoint
+    config.action_controller.permit_all_parameters = true
   end
 end
