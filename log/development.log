@@ -12509,3 +12509,107 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 76ms (Views: 73.5ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-10-26 19:36:16 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 2428ms (Views: 2418.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-10-26 19:36:23 -0700
+Processing by UsersController#new as HTML
+DEPRECATION WARNING: Passing string to be evaluated in :if and :unless conditional options is deprecated and will be removed in Rails 5.2 without replacement. Pass a symbol for an instance method, or a lambda, proc or block, instead. (called from <class:User> at /Users/JYUN/Projects/bloc/bloccit/app/models/user.rb:13)
+DEPRECATION WARNING: Passing string to be evaluated in :if and :unless conditional options is deprecated and will be removed in Rails 5.2 without replacement. Pass a symbol for an instance method, or a lambda, proc or block, instead. (called from <class:User> at /Users/JYUN/Projects/bloc/bloccit/app/models/user.rb:13)
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (24.2ms)
+Completed 200 OK in 95ms (Views: 61.7ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/users/confirm" for 127.0.0.1 at 2017-10-26 19:36:30 -0700
+Processing by UsersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PvF64rOE8u2t/AavJKitYy1LsJaSI4rZQ/nsS4qXO4M8w+HQhBOBVhWryKVZ/9yobVgodhRsItoijqRNMw287w==", "user"=>{"name"=>"Jacob Yun", "email"=>"jacob.yun429@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering users/confirm.html.erb within layouts/application
+  Rendered users/confirm.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 109ms (Views: 33.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users?action=confirm&authenticity_token=PvF64rOE8u2t%2FAavJKitYy1LsJaSI4rZQ%2FnsS4qXO4M8w%2BHQhBOBVhWryKVZ%2F9yobVgodhRsItoijqRNMw287w%3D%3D&commit=Sign+up&controller=users&user%5Bemail%5D=jacob.yun429%40gmail.com&user%5Bname%5D=Jacob+Yun&user%5Bpassword%5D=[FILTERED]&user%5Bpassword_confirmation%5D=[FILTERED]&utf8=%E2%9C%93" for 127.0.0.1 at 2017-10-26 19:36:32 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"PvF64rOE8u2t/AavJKitYy1LsJaSI4rZQ/nsS4qXO4M8w+HQhBOBVhWryKVZ/9yobVgodhRsItoijqRNMw287w==", "commit"=>"Sign up", "user"=>{"email"=>"jacob.yun429@gmail.com", "name"=>"Jacob Yun", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "utf8"=>"✓"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jacob.yun429@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Jacob Yun"], ["email", "jacob.yun429@gmail.com"], ["password_digest", "$2a$10$hXBjsCpLFpm.uUP1klk4/Ot9Qj8WQS7H17lT.uI2a4DT9j17ahjL2"], ["created_at", "2017-10-27 02:36:32.224291"], ["updated_at", "2017-10-27 02:36:32.224291"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 81ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-26 19:36:32 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 46ms (Views: 44.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-26 19:36:35 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 57ms (Views: 54.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2017-10-26 19:38:31 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (13.3ms)
+DEPRECATION WARNING: Passing string to be evaluated in :if and :unless conditional options is deprecated and will be removed in Rails 5.2 without replacement. Pass a symbol for an instance method, or a lambda, proc or block, instead. (called from <class:User> at /Users/JYUN/Projects/bloc/bloccit/app/models/user.rb:13)
+DEPRECATION WARNING: Passing string to be evaluated in :if and :unless conditional options is deprecated and will be removed in Rails 5.2 without replacement. Pass a symbol for an instance method, or a lambda, proc or block, instead. (called from <class:User> at /Users/JYUN/Projects/bloc/bloccit/app/models/user.rb:13)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 1964ms (Views: 1954.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-10-26 19:38:43 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tvbBNXoBy0dnQRGkoZnOoQnb0WwVTcD4xW0F3FicF2NpH0i81jJ0cQCKcmU24q1tQ71b5fT91tKAmXpRlPNKgw==", "session"=>{"email"=>"jacob.yun429@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jacob.yun429@gmail.com"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 149ms (ActiveRecord: 0.8ms)
+
+
+  
+NoMethodError (undefined method `create_session' for #<SessionsController:0x007fd196f07c00>
+Did you mean?  reset_session):
+  
+app/controllers/sessions_controller.rb:11:in `create'
+Started GET "/" for 127.0.0.1 at 2017-10-26 19:40:25 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.2ms)
+DEPRECATION WARNING: Passing string to be evaluated in :if and :unless conditional options is deprecated and will be removed in Rails 5.2 without replacement. Pass a symbol for an instance method, or a lambda, proc or block, instead. (called from <class:User> at /Users/JYUN/Projects/bloc/bloccit/app/models/user.rb:13)
+DEPRECATION WARNING: Passing string to be evaluated in :if and :unless conditional options is deprecated and will be removed in Rails 5.2 without replacement. Pass a symbol for an instance method, or a lambda, proc or block, instead. (called from <class:User> at /Users/JYUN/Projects/bloc/bloccit/app/models/user.rb:13)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 314ms (Views: 304.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2017-10-26 19:40:58 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (20.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 65.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-10-26 19:41:02 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"srTOhqraHcpQSUYJ4Ffl1LXYTCDdMD3HRoFfgpCLn9h7VjmnjKIOzhBQyjVyL2E5paQJmYx6ZVaHuisAwg1ZXA==", "session"=>{"email"=>"jacob.yun429@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jacob.yun429@gmail.com"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 146ms (ActiveRecord: 1.3ms)
+
+
+  
+NoMethodError (undefined method `create_session' for #<SessionsController:0x007ffad7a01e80>
+Did you mean?  reset_session):
+  
+app/controllers/sessions_controller.rb:11:in `create'
