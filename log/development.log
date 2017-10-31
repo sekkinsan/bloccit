@@ -12613,3 +12613,143 @@ NoMethodError (undefined method `create_session' for #<SessionsController:0x007f
 Did you mean?  reset_session):
   
 app/controllers/sessions_controller.rb:11:in `create'
+Started GET "/" for 127.0.0.1 at 2017-10-30 19:29:03 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.6ms)
+DEPRECATION WARNING: Passing string to be evaluated in :if and :unless conditional options is deprecated and will be removed in Rails 5.2 without replacement. Pass a symbol for an instance method, or a lambda, proc or block, instead. (called from <class:User> at /Users/JYUN/Projects/bloc/bloccit/app/models/user.rb:13)
+DEPRECATION WARNING: Passing string to be evaluated in :if and :unless conditional options is deprecated and will be removed in Rails 5.2 without replacement. Pass a symbol for an instance method, or a lambda, proc or block, instead. (called from <class:User> at /Users/JYUN/Projects/bloc/bloccit/app/models/user.rb:13)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 384ms (Views: 372.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2017-10-30 19:29:14 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (26.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 77ms (Views: 74.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-10-30 19:29:16 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (8.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 66ms (Views: 49.4ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2017-10-30 19:29:18 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 111ms (Views: 107.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-30 19:29:19 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 78ms (Views: 75.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2017-10-30 19:29:21 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 86ms (Views: 82.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-10-30 19:29:24 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NkjRSNWb2Uz3+lj0C2K6Y+1Yztdy7iPOoEP91wnoacL1+6/ylxCXra0R/cMsQeT4qsznxMsg+MUAQ9sg+pu6+w==", "session"=>{"email"=>"jacob.yun429@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jacob.yun429@gmail.com"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 136ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `create_session' for #<SessionsController:0x007fcea3e75148>
+Did you mean?  reset_session):
+  
+app/controllers/sessions_controller.rb:11:in `create'
+Started GET "/" for 127.0.0.1 at 2017-10-30 19:31:34 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 1713ms (Views: 1709.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-30 19:31:36 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 84ms (Views: 82.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-30 19:31:48 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 45ms (Views: 42.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-10-30 19:31:53 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 58ms (Views: 53.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users/confirm" for 127.0.0.1 at 2017-10-30 19:32:01 -0700
+Processing by UsersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XG5e1d2PrJcOFQKmnenA4AGxBTszMfRw0nVd6ezkNih7wB7cwgodUbK8xMZW01lVSpg4J2orZSgex6e3npgoOw==", "user"=>{"name"=>"Jacob Yun", "email"=>"jacob.yun429@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering users/confirm.html.erb within layouts/application
+  Rendered users/confirm.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 110ms (Views: 35.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users?action=confirm&authenticity_token=XG5e1d2PrJcOFQKmnenA4AGxBTszMfRw0nVd6ezkNih7wB7cwgodUbK8xMZW01lVSpg4J2orZSgex6e3npgoOw%3D%3D&commit=Sign+up&controller=users&user%5Bemail%5D=jacob.yun429%40gmail.com&user%5Bname%5D=Jacob+Yun&user%5Bpassword%5D=[FILTERED]&user%5Bpassword_confirmation%5D=[FILTERED]&utf8=%E2%9C%93" for 127.0.0.1 at 2017-10-30 19:32:03 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"XG5e1d2PrJcOFQKmnenA4AGxBTszMfRw0nVd6ezkNih7wB7cwgodUbK8xMZW01lVSpg4J2orZSgex6e3npgoOw==", "commit"=>"Sign up", "user"=>{"email"=>"jacob.yun429@gmail.com", "name"=>"Jacob Yun", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "utf8"=>"✓"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jacob.yun429@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 119ms (Views: 38.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/confirm" for 127.0.0.1 at 2017-10-30 19:32:11 -0700
+Processing by UsersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jhXCZkbCtT9ohLpauk/H9dSkJKUoO8n07BaezoOICtG5V0ywRKXDzFDGZUeK7yqMi25T+J55k1StmhLKm0TN5A==", "user"=>{"name"=>"Jacob Yun", "email"=>"jacobyun429@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering users/confirm.html.erb within layouts/application
+  Rendered users/confirm.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 109ms (Views: 35.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users?action=confirm&authenticity_token=jhXCZkbCtT9ohLpauk%2FH9dSkJKUoO8n07BaezoOICtG5V0ywRKXDzFDGZUeK7yqMi25T%2BJ55k1StmhLKm0TN5A%3D%3D&commit=Sign+up&controller=users&user%5Bemail%5D=jacobyun429%40gmail.com&user%5Bname%5D=Jacob+Yun&user%5Bpassword%5D=[FILTERED]&user%5Bpassword_confirmation%5D=[FILTERED]&utf8=%E2%9C%93" for 127.0.0.1 at 2017-10-30 19:32:13 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"jhXCZkbCtT9ohLpauk/H9dSkJKUoO8n07BaezoOICtG5V0ywRKXDzFDGZUeK7yqMi25T+J55k1StmhLKm0TN5A==", "commit"=>"Sign up", "user"=>{"email"=>"jacobyun429@gmail.com", "name"=>"Jacob Yun", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "utf8"=>"✓"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jacobyun429@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Jacob Yun"], ["email", "jacobyun429@gmail.com"], ["password_digest", "$2a$10$4vbXIpdhYOjqeC40Xnb/c.i3Y7U4Ndw6141WhdVeSIzfNLqgjz7b6"], ["created_at", "2017-10-31 02:32:13.323106"], ["updated_at", "2017-10-31 02:32:13.323106"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 141ms (ActiveRecord: 1.9ms)
+
+
+  
+NoMethodError (undefined method `create_session' for #<UsersController:0x007fcea4f08370>
+Did you mean?  reset_session):
+  
+app/controllers/users_controller.rb:19:in `create'
