@@ -8,6 +8,18 @@
 
 require 'random_data'
 
+
+#create Users
+
+5.times do
+  User.create!(
+    name: RandomData.random_name,
+    email: RandomData.random_email,
+    password: RandomData.random_sentence
+  )
+end
+users = User.all
+
 #create Topics
 15.times do
   Topic.create!(
@@ -23,19 +35,10 @@ topics = Topic.all
   Post.create!(
   #use methods from a class that doesn't exist yet, RandomData, that will create random strings
   #this is called wishful coding and allows us to focus on one problem at a time
+    user: users.sample,
     topic: topics.sample,
     title: RandomData.random_sentence,
     body: RandomData.random_paragraph
-  )
-end
-
-#create sponsoredposts
-10.times do
-  SponsoredPost.create!(
-    topic: topics.sample,
-    title: RandomData.random_sentence,
-    body: RandomData.random_paragraph,
-    price: 99 #figure out price
   )
 end
 
@@ -64,9 +67,15 @@ Post.find_or_create_by(title: 'Meow', body: 'Meeeeeow')
   )
 end
 
+user = User.first
+user.update_attributes!(
+  email: "jacob.yun429@gmail.com",
+  password: "helloworld"
+)
+
 puts "Seed finished"
+puts "#{User.count} users created"
 puts "#{Topic.count} topics created"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"
 puts "#{Question.count} questions created"
-puts "#{SponsoredPost.count} sponsored posts created"

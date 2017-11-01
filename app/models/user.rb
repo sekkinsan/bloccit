@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+    has_many :posts, dependent: :destroy
     #register inline callback directly after before_save callback
     before_save { self.email = email.downcase if email.present? }
     

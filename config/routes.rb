@@ -4,7 +4,6 @@ Rails.application.routes.draw do
 #viewing, and deleting instances of post
 resources :topics do
   resources :posts, except: [:index]
-  resources :sponsored_posts, except:[:index]
 end
 
 #create routes for new and create actions, using hash key to prevent Rails from creating unnecessary routes
