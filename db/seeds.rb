@@ -67,10 +67,19 @@ Post.find_or_create_by(title: 'Meow', body: 'Meeeeeow')
   )
 end
 
-user = User.first
-user.update_attributes!(
-  email: "jacob.yun429@gmail.com",
-  password: "helloworld"
+#ADMIN USER
+admin = User.create!(
+  name: 'Admin User',
+  email: 'admin@example.com',
+  password: 'helloworld',
+  role: 'admin'
+)
+
+#MEMBER USER
+member = User.create!(
+  name: 'Member User',
+  email: 'member@example.com',
+  password: 'helloworld'
 )
 
 puts "Seed finished"

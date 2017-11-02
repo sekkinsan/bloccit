@@ -3,6 +3,9 @@ class User < ApplicationRecord
     #register inline callback directly after before_save callback
     before_save { self.email = email.downcase if email.present? }
     
+    #||= is a Ruby trick, shorthand for self.role = :member if self.role.nil?
+    before_save { self.role ||= :member }
+
     #callback to uppercase first letter of first and last name
     before_save :format_name
 
@@ -23,6 +26,8 @@ class User < ApplicationRecord
 
     #user Ruby's has_secure_password which adds methods to set and authenticate against a BCrypt password
     has_secure_password
+
+    enum role: [:member, :admin]
 
     def format_name
         if name
