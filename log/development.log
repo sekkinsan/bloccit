@@ -16395,3 +16395,5 @@ DEPRECATION WARNING: Passing string to be evaluated in :if and :unless condition
 Completed 200 OK in 100ms (Views: 82.1ms | ActiveRecord: 4.4ms)
 
 
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at ASC LIMIT ?[0m  [["LIMIT", 1]]
