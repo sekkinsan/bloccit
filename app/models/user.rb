@@ -27,7 +27,7 @@ class User < ApplicationRecord
     #user Ruby's has_secure_password which adds methods to set and authenticate against a BCrypt password
     has_secure_password
 
-    enum role: [:member, :admin]
+    enum role: [:member, :moderator, :admin]
 
     def format_name
         if name
