@@ -6,6 +6,10 @@ resources :topics do
   resources :posts, except: [:index]
 end
 
+resources :posts, only: [] do
+  resources :comments, only: [:create, :destroy]
+end
+
 #create routes for new and create actions, using hash key to prevent Rails from creating unnecessary routes
 resources :users, only: [:new, :create]
 post 'users/confirm' => 'users#confirm'
