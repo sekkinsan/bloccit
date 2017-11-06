@@ -32,7 +32,7 @@ topics = Topic.all
 #create Posts
 50.times do
   #use create! (! = bang) with a bang which instructs the method to raise an error if there's a problem
-  Post.create!(
+  post = Post.create!(
   #use methods from a class that doesn't exist yet, RandomData, that will create random strings
   #this is called wishful coding and allows us to focus on one problem at a time
     user: users.sample,
@@ -40,6 +40,14 @@ topics = Topic.all
     title: RandomData.random_sentence,
     body: RandomData.random_paragraph
   )
+
+  #update the time a post was created, make seeded data more realistic and allow us to see our ranking algorithm
+  post.update_attribute(:created_at, rand(10.minutes .. 1.year).ago)
+
+  #create between 1 and 5 votes for each post
+  rand(1..5).times { post.votes.create!(value: [-1, 1].sample, user: users.sample) }
+
+
 end
 
 posts = Post.all
@@ -89,3 +97,4 @@ puts "#{Topic.count} topics created"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"
 puts "#{Question.count} questions created"
+puts "#{Vote.count} votes created"
