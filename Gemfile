@@ -52,6 +52,9 @@ source 'https://rubygems.org'
  #add pry-rails
  gem 'pry-rails', :group => :development
 
+ #gem figaro favorites checkpoint
+ gem 'figaro', '1.0'
+
  group :development do
    gem 'listen', '~> 3.0.5'
  end
