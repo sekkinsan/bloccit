@@ -27,9 +27,9 @@ resources :questions
 #users to visit /about, rather than /welcome/about
 get 'about' => 'welcome#about'
 
-#  get 'welcome/contact'
+get 'welcome/contact'
 
-#  get 'welcome/faq'
+get 'welcome/faq'
 
   root 'welcome#index' #makes default page be the welcome index view
 
