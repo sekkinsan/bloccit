@@ -15,7 +15,7 @@ resources :posts, only: [] do
 end
 
 #create routes for new and create actions, using hash key to prevent Rails from creating unnecessary routes
-resources :users, only: [:new, :create]
+resources :users, only: [:new, :create, :show]
 post 'users/confirm' => 'users#confirm'
 
 resources :sessions, only: [:new, :create, :destroy]
