@@ -27,6 +27,8 @@ source 'https://rubygems.org'
    gem 'rspec-rails', '~> 3.0'
    gem 'rails-controller-testing'
    gem 'shoulda'
+    #FactoryGirl to build User objects public profiles checkpoint
+   gem 'factory_girl_rails', '~> 4.0' 
  end
 
  # Use Puma as the app server

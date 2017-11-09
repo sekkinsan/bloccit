@@ -25754,3 +25754,72 @@ Content-Transfer-Encoding: 7bit
 ----==_mimepart_5a0378c630244_693a3fd89343e4908109a--
 
   [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: Passing string to be evaluated in :if and :unless conditional options is deprecated and will be removed in Rails 5.2 without replacement. Pass a symbol for an instance method, or a lambda, proc or block, instead. (called from <class:User> at /Users/JYUN/Projects/bloc/bloccit/app/models/user.rb:21)
+DEPRECATION WARNING: Passing string to be evaluated in :if and :unless conditional options is deprecated and will be removed in Rails 5.2 without replacement. Pass a symbol for an instance method, or a lambda, proc or block, instead. (called from <class:User> at /Users/JYUN/Projects/bloc/bloccit/app/models/user.rb:21)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "topic_id", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "new post new post new post"], ["body", "body body body body body body body body"], ["created_at", "2017-11-09 05:37:37.952456"], ["updated_at", "2017-11-09 05:37:37.952456"], ["topic_id", 1], ["user_id", 8]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "favorites" ("user_id", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 8], ["post_id", 52], ["created_at", "2017-11-09 05:37:37.967953"], ["updated_at", "2017-11-09 05:37:37.967953"]]
+  Rendering favorite_mailer/new_post.html.erb within layouts/mailer
+  Rendered favorite_mailer/new_post.html.erb within layouts/mailer (2.0ms)
+  Rendering favorite_mailer/new_post.text.erb within layouts/mailer
+  Rendered favorite_mailer/new_post.text.erb within layouts/mailer (1.3ms)
+FavoriteMailer#new_post: processed outbound mail in 214.9ms
+Sent mail to jacob.yun429@gmail.com (699.3ms)
+Date: Wed, 08 Nov 2017 21:37:38 -0800
+From: jacob.yun429@gmail.com
+To: jacob.yun429@gmail.com
+Message-ID: <posts/52@bloccit.example>
+In-Reply-To: <post/52@bloccit.example>
+References: <post/52@bloccit.example>
+Subject: You're following new post new post new post
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5a03e9a22ed12_6ac83fcdd003e4a89804";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5a03e9a22ed12_6ac83fcdd003e4a89804
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+You are now following "new post new post new post", you will be notified of all comments. If you want to turn off notifications, unfavorite your <a href="http://localhost/topics/1/posts/52">post</a>
+
+
+----==_mimepart_5a03e9a22ed12_6ac83fcdd003e4a89804
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+     <!DOCTYPE html>
+ <html>
+   <head>
+     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+   </head>
+   <body>
+     <h1>You are now following "new post new post new post", you will be notified of all comments. If you want to turn off notifications, unfavorite your <a href="http://localhost/topics/1/posts/52">post</a></h1>
+     <p>
+ # #20
+       <a href="http://localhost/topics/1/posts/52">View Post on site</a>
+     </p>
+   </body>
+ </html>
+  </body>
+</html>
+
+----==_mimepart_5a03e9a22ed12_6ac83fcdd003e4a89804--
+
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
