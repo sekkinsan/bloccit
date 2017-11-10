@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-md-8">
     <div class="media">
-      <br />
+      <br/>
       <% avatar_url = @user.avatar_url(128) %>
       <% if avatar_url %>
         <div class="media-left">
@@ -13,14 +13,20 @@
         <small>
           <%= pluralize(@user.posts.count, 'post') %>,
           <%= pluralize(@user.comments.count, 'comment') %>
+          <%= pluralize(@user.faves.count, 'favorites') %>
         </small>
       </div>
     </div>
   </div>
 </div>
 
+<div class="display">
+<h2>Favorites</h2>
+  <li class="pull-left"><%= image_tag avatar_url, class: 'media-object' %><%= users_favorites(@user.faves) %></li>
+
 <h2>Posts</h2>
-<%= render @user.posts %>
+<%= users_posts(@user.posts) %>
 
 <h2>Comments</h2>
-<%= render @user.comments %>
+<%= users_comments(@user.comments) %>
+</div>
