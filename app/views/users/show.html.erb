@@ -21,12 +21,13 @@
 </div>
 
 <div class="display">
-<h2>Favorites</h2>
-  <li class="pull-left"><%= image_tag avatar_url, class: 'media-object' %><%= users_favorites(@user.faves) %></li>
 
 <h2>Posts</h2>
 <%= users_posts(@user.posts) %>
 
 <h2>Comments</h2>
 <%= users_comments(@user.comments) %>
+
+<h2>Favorites</h2>
+  <%= users_favorites(@user.faves) %>
 </div>
